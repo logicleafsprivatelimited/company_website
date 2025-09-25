@@ -1,0 +1,948 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startup Tech Consulting Services | MVP Development & Strategic Support</title>
+  <meta name="description" content="End-to-end technical and strategic support for ambitious startups. MVP development, tech co-founder services, UI/UX design, and investor-ready pitch decks." />
+  <meta name="keywords" content="startup consulting, MVP development, tech co-founder, UI/UX design, pitch deck, technical strategy, startup support" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Startup Tech Consulting Services | MVP Development & Strategic Support" />
+  <meta property="og:description" content="End-to-end technical and strategic support for ambitious startups. MVP development, tech co-founder services, UI/UX design, and investor-ready pitch decks." />
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #072544;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    
+    /* Layout components */
+    .main-container {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .header-section {
+      width: 100%;
+      background-color: #15324f;
+      height: 104px;
+    }
+    
+    .hero-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 172px 16px 0;
+      text-align: center;
+    }
+    
+    .services-section {
+      width: 100%;
+      max-width: 1240px;
+      margin: 246px 16px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 152px;
+    }
+    
+    .services-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      width: 100%;
+    }
+    
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 54px;
+      width: 100%;
+    }
+    
+    .service-card {
+      background-color: #072544;
+      border: 2px solid transparent;
+      border-image: linear-gradient(180deg, #bf00ff 0%, #00ffff 100%);
+      border-image-slice: 1;
+      border-radius: 10px;
+      padding: 32px;
+      width: 100%;
+    }
+    
+    .service-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .service-icon-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(180deg, #bf00ff 0%, #720099 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .service-icon img {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .service-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+      text-align: left;
+    }
+    
+    .service-description {
+      margin: 12px 0 28px;
+      text-align: left;
+    }
+    
+    .service-details {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+    
+    .service-details-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+    }
+    
+    .details-box {
+      background-color: #143a65;
+      border: 1px solid rgba(191, 0, 255, 0.3);
+      border-radius: 12px;
+      padding: 24px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .details-header {
+      font-size: 22px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    
+    .details-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .details-list li {
+      font-size: 18px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #8e8e8e;
+      position: relative;
+      padding-left: 20px;
+      text-align: left;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .details-list li:before {
+      content: '•';
+      color: #bf00ff;
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      line-height: 1;
+    }
+    
+    .process-section {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .process-steps {
+      background-color: #143a65;
+      border-radius: 6px;
+      padding: 32px 16px;
+      margin-top: 90px;
+      width: 100%;
+    }
+    
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      width: 100%;
+    }
+    
+    .process-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+    }
+    
+    .step-number {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(180deg, #bf00ff 0%, #720099 100%);
+      border-radius: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+    
+    .cta-section {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 16px;
+    }
+    
+    .cta-card {
+      background-color: #143a65;
+      border-radius: 12px;
+      padding: 48px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-button {
+      background-color: #143a65;
+      border: 2px solid transparent;
+      border-image: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      border-image-slice: 1;
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 48px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    /* Typography */
+    .hero-title {
+      font-size: 32px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 26px;
+    }
+    
+    .hero-title .gradient-text {
+      background: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: center;
+      color: #8e8e8e;
+      margin-bottom: 52px;
+    }
+    
+    .hero-button {
+      background: linear-gradient(90deg, #bf00ff 0%, #00ffff 100%);
+      border: none;
+      border-radius: 10px;
+      padding: 20px 34px;
+      font-size: 24px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .section-title {
+      font-size: 32px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+      color: #ffffff;
+    }
+    
+    .section-title .gradient-text {
+      background: linear-gradient(90deg, #bf00ff 0%, #00ffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .service-title {
+      font-size: 24px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+    
+    .service-subtitle {
+      font-size: 22px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #5a5a5a;
+    }
+    
+    .service-description-text {
+      font-size: 20px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #8e8e8e;
+    }
+    
+    .process-title {
+      font-size: 32px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    .process-title .gradient-text {
+      background: linear-gradient(90deg, #bf00ff 0%, #00ffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .process-subtitle {
+      font-size: 24px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: center;
+      color: #8e8e8e;
+      margin-top: 14px;
+    }
+    
+    .step-title {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+    
+    .step-description {
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #b8b8b8;
+    }
+    
+    .cta-title {
+      font-size: 28px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+    
+    .cta-title .gradient-text {
+      background: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .cta-subtitle {
+      font-size: 20px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: center;
+      color: #bababa;
+      margin-top: 22px;
+    }
+    
+    .cta-button-text {
+      font-size: 18px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+    
+    /* Interactive states */
+    .hero-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(191, 0, 255, 0.3);
+    }
+    
+    .cta-button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 15px rgba(157, 0, 255, 0.3);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(191, 0, 255, 0.2);
+    }
+    
+    .details-box:hover {
+      border-color: rgba(191, 0, 255, 0.5);
+      box-shadow: 0 4px 15px rgba(191, 0, 255, 0.1);
+    }
+    
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+      .hero-section {
+        padding: 172px 56px 0;
+      }
+      
+      .hero-title {
+        font-size: 42px;
+      }
+      
+      .hero-subtitle {
+        font-size: 20px;
+      }
+      
+      .hero-button {
+        font-size: 28px;
+      }
+      
+      .services-section {
+        margin: 246px 50px 0;
+      }
+      
+      .service-card {
+        padding: 44px;
+      }
+      
+      .service-icon-row {
+        gap: 46px;
+      }
+      
+      .service-details-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+      }
+      
+      .details-box {
+        width: calc(50% - 16px);
+      }
+      
+      .details-list li {
+        font-size: 20px;
+      }
+      
+      .process-steps {
+        padding: 48px 32px;
+      }
+      
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+      }
+      
+      .cta-card {
+        padding: 60px 40px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 52px;
+      }
+      
+      .hero-subtitle {
+        font-size: 22px;
+      }
+      
+      .hero-button {
+        font-size: 30px;
+      }
+      
+      .section-title {
+        font-size: 40px;
+      }
+      
+      .service-title {
+        font-size: 28px;
+      }
+      
+      .service-subtitle {
+        font-size: 26px;
+      }
+      
+      .service-description-text {
+        font-size: 24px;
+      }
+      
+      .details-header {
+        font-size: 26px;
+      }
+      
+      .details-list li {
+        font-size: 22px;
+      }
+      
+      .process-title {
+        font-size: 40px;
+      }
+      
+      .process-subtitle {
+        font-size: 30px;
+      }
+      
+      .step-title {
+        font-size: 20px;
+      }
+      
+      .step-description {
+        font-size: 18px;
+      }
+      
+      .cta-title {
+        font-size: 32px;
+      }
+      
+      .cta-subtitle {
+        font-size: 24px;
+      }
+      
+      .cta-button-text {
+        font-size: 22px;
+      }
+      
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 65px;
+        line-height: 97px;
+      }
+      
+      .hero-subtitle {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      
+      .hero-button {
+        font-size: 34px;
+        line-height: 42px;
+      }
+      
+      .section-title {
+        font-size: 48px;
+        line-height: 72px;
+      }
+      
+      .service-card {
+        padding: 52px;
+      }
+      
+      .service-title {
+        font-size: 34px;
+        line-height: 42px;
+      }
+      
+      .service-subtitle {
+        font-size: 33px;
+        line-height: 41px;
+      }
+      
+      .service-description-text {
+        font-size: 28px;
+        line-height: 35px;
+      }
+      
+      .details-header {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      
+      .details-list li {
+        font-size: 26px;
+        line-height: 31px;
+      }
+      
+      .process-title {
+        font-size: 48px;
+        line-height: 59px;
+      }
+      
+      .process-subtitle {
+        font-size: 37px;
+        line-height: 45px;
+      }
+      
+      .step-title {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      
+      .step-description {
+        font-size: 23px;
+        line-height: 34px;
+      }
+      
+      .cta-title {
+        font-size: 40px;
+        line-height: 49px;
+      }
+      
+      .cta-subtitle {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      
+      .cta-button-text {
+        font-size: 27px;
+        line-height: 33px;
+      }
+      
+      .services-section {
+        margin: 246px 100px 0;
+      }
+      
+      .process-steps {
+        padding: 60px 48px;
+      }
+      
+      .cta-card {
+        padding: 78px 56px;
+      }
+    }
+  </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fkrishsap3141back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body>
+  <main class="main-container">
+    <!-- Header Section -->
+    <header class="header-section"></header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">
+        <span class="gradient-text">Startup Tech Consulting</span> Services
+      </h1>
+      <p class="hero-subtitle">
+        From concept to scale, we provide end-to-end technical and strategic support for ambitious startups and entrepreneurs.
+      </p>
+      <a href="#contact" class="hero-button">Start your project</a>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="services-header">
+        <h2 class="section-title">
+          Our Core <span class="gradient-text">Services</span>
+        </h2>
+        
+        <div class="services-list">
+          <!-- MVP Development Service -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="service-icon-row">
+                <div class="service-icon">
+                  <img src="../assets/images/img_mynaui_rocket_solid.svg" alt="MVP Development Icon" />
+                </div>
+                <div class="service-title-group">
+                  <h3 class="service-title">MVP Development</h3>
+                  <p class="service-subtitle">Full-Stack Product Development</p>
+                </div>
+              </div>
+            </div>
+            <p class="service-description service-description-text">
+              Transform your idea into a market-ready product with our comprehensive MVP development service.
+            </p>
+            <div class="service-details">
+              <div class="service-details-content">
+                <div class="details-box">
+                  <h4 class="details-header">What's Included</h4>
+                  <ul class="details-list">
+                    <li>React/Next.js frontend development</li>
+                    <li>Node.js/Python backend architecture</li>
+                    <li>Database design & optimization</li>
+                    <li>REST/GraphQL API development</li>
+                    <li>Authentication & user management</li>
+                    <li>Payment integration (Stripe/PayPal)</li>
+                    <li>Admin dashboard & analytics</li>
+                    <li>Mobile-responsive design</li>
+                    <li>Cloud deployment (AWS/Vercel)</li>
+                    <li>Performance optimization</li>
+                  </ul>
+                </div>
+                <div class="details-box">
+                  <h4 class="details-header">Deliverables</h4>
+                  <ul class="details-list">
+                    <li>Fully functional web application</li>
+                    <li>Source code & documentation</li>
+                    <li>Deployment & hosting setup</li>
+                    <li>User testing & feedback integration</li>
+                    <li>30 days post-launch support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Tech Co-founder Services -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="service-icon-row">
+                <div class="service-icon">
+                  <img src="../assets/images/img_streamline_ulti.svg" alt="Tech Co-founder Services Icon" />
+                </div>
+                <div class="service-title-group">
+                  <h3 class="service-title">Tech Co-founder Services</h3>
+                  <p class="service-subtitle">Strategic Technical Leadership</p>
+                </div>
+              </div>
+            </div>
+            <p class="service-description service-description-text">
+              Get CTO-level expertise without giving up equity. Strategic technical guidance for your startup.
+            </p>
+            <div class="service-details">
+              <div class="service-details-content">
+                <div class="details-box">
+                  <h4 class="details-header">What's Included</h4>
+                  <ul class="details-list">
+                    <li>Technical strategy & roadmap</li>
+                    <li>Architecture & infrastructure planning</li>
+                    <li>Team hiring & technical interviews</li>
+                    <li>Code reviews & quality assurance</li>
+                    <li>Technology stack decisions</li>
+                    <li>Scalability planning</li>
+                    <li>Security best practices</li>
+                    <li>Investor pitch support</li>
+                    <li>Technical due diligence</li>
+                    <li>Vendor & tool selection</li>
+                  </ul>
+                </div>
+                <div class="details-box">
+                  <h4 class="details-header">Deliverables</h4>
+                  <ul class="details-list">
+                    <li>Monthly strategy sessions</li>
+                    <li>Technical roadmap document</li>
+                    <li>Team hiring recommendations</li>
+                    <li>Architecture documentation</li>
+                    <li>Investor presentation support</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Product Strategy & UI/UX -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="service-icon-row">
+                <div class="service-icon">
+                  <img src="../assets/images/img_bi_puzzle_fill.svg" alt="Product Strategy & UI/UX Icon" />
+                </div>
+                <div class="service-title-group">
+                  <h3 class="service-title">Product Strategy & UI/UX</h3>
+                  <p class="service-subtitle">User-Centered Design & Growth</p>
+                </div>
+              </div>
+            </div>
+            <p class="service-description service-description-text">
+              Data-driven product decisions and user experience design that converts and retains customers.
+            </p>
+            <div class="service-details">
+              <div class="service-details-content">
+                <div class="details-box">
+                  <h4 class="details-header">What's Included</h4>
+                  <ul class="details-list">
+                    <li>User research & persona development</li>
+                    <li>Competitive analysis & market research</li>
+                    <li>Information architecture design</li>
+                    <li>Wireframing & prototyping</li>
+                    <li>User interface design</li>
+                    <li>Usability testing & iteration</li>
+                    <li>Design system creation</li>
+                    <li>Growth metrics & KPI tracking</li>
+                    <li>A/B testing framework</li>
+                    <li>Conversion optimization</li>
+                  </ul>
+                </div>
+                <div class="details-box">
+                  <h4 class="details-header">Deliverables</h4>
+                  <ul class="details-list">
+                    <li>Complete design system</li>
+                    <li>Interactive prototypes</li>
+                    <li>User research findings</li>
+                    <li>Design specifications</li>
+                    <li>Growth strategy document</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Investor-Ready Pitch Decks -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="service-icon-row">
+                <div class="service-icon">
+                  <img src="../assets/images/img_majesticons_presentation_play.svg" alt="Investor-Ready Pitch Decks Icon" />
+                </div>
+                <div class="service-title-group">
+                  <h3 class="service-title">Investor-Ready Pitch Decks</h3>
+                  <p class="service-subtitle">Funding & Partnership Materials</p>
+                </div>
+              </div>
+            </div>
+            <p class="service-description service-description-text">
+              Compelling presentations and prototypes that help secure funding and strategic partnerships.
+            </p>
+            <div class="service-details">
+              <div class="service-details-content">
+                <div class="details-box">
+                  <h4 class="details-header">What's Included</h4>
+                  <ul class="details-list">
+                    <li>Pitch deck design & storytelling</li>
+                    <li>Financial modeling & projections</li>
+                    <li>Market analysis & sizing</li>
+                    <li>Competitive landscape analysis</li>
+                    <li>Demo video production</li>
+                    <li>Interactive prototype creation</li>
+                    <li>Investor presentation coaching</li>
+                    <li>Due diligence document preparation</li>
+                    <li>Executive summary creation</li>
+                    <li>Follow-up materials design</li>
+                  </ul>
+                </div>
+                <div class="details-box">
+                  <h4 class="details-header">Deliverables</h4>
+                  <ul class="details-list">
+                    <li>Professional pitch deck</li>
+                    <li>Financial model spreadsheet</li>
+                    <li>Demo prototype</li>
+                    <li>Investor presentation coaching</li>
+                    <li>Follow-up email templates</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+      <!-- Development Process Section -->
+      <div class="process-section">
+        <h2 class="process-title">
+          Our Development <span class="gradient-text">Process</span>
+        </h2>
+        <p class="process-subtitle">
+          A proven methodology that ensures successful project delivery and long-term success.
+        </p>
+        
+        <div class="process-steps">
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="step-number">01</div>
+              <h3 class="step-title">Discovery</h3>
+              <p class="step-description">We dive deep into your vision, market, and technical requirements.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">02</div>
+              <h3 class="step-title">Strategy</h3>
+              <p class="step-description">Create a detailed roadmap with timelines, milestones, and success metrics.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">03</div>
+              <h3 class="step-title">Execution</h3>
+              <p class="step-description">Build, test, and iterate with regular check-ins and transparent communication.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">04</div>
+              <h3 class="step-title">Launch</h3>
+              <p class="step-description">Deploy, monitor, and optimize with ongoing support for continued success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="cta-card">
+          <h2 class="cta-title">
+            Ready to <span class="gradient-text">Start Your Project?</span>
+          </h2>
+          <p class="cta-subtitle">
+            Get a free consultation and project estimate. Let's discuss how we can bring your vision to life.
+          </p>
+          <a href="#contact" class="cta-button">
+            <span class="cta-button-text">Get Free Consultation</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

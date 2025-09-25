@@ -1,0 +1,945 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web & App Development Services | Full-Stack Solutions</title>
+  <meta name="description" content="Comprehensive web and mobile development solutions designed to accelerate your business growth and digital transformation. Expert full-stack, mobile apps, SaaS platforms." />
+  <meta name="keywords" content="web development, mobile app development, full-stack development, SaaS platforms, progressive web apps, digital transformation" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Web & App Development Services | Full-Stack Solutions" />
+  <meta property="og:description" content="Comprehensive web and mobile development solutions designed to accelerate your business growth and digital transformation." />
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Calibri', sans-serif;
+      background-color: #072544;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    
+    /* Layout components */
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+    }
+    
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding-top: 60px;
+    }
+    
+    .hero-line {
+      width: 100%;
+      height: 1px;
+      background-color: #6d6a6a;
+    }
+    
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      max-width: 1110px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .services-section {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .services-header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+    
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 22px 20px;
+      background-color: #072544;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      border-image: linear-gradient(180deg, #9d00ff 0%, #1ae2e2 100%);
+      border-image-slice: 1;
+    }
+    
+    .service-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+    }
+    
+    .service-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 40px;
+      padding: 12px;
+      background: linear-gradient(180deg, #9d00ff 0%, #5e0099 100%);
+    }
+    
+    .service-icon img {
+      width: 56px;
+      height: 56px;
+    }
+    
+    .circle-icon {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .circle-icon img:first-child {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .circle-icon img:last-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+    }
+    
+    .additional-services {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .additional-header {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .additional-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+    
+    .additional-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 32px 20px;
+      background-color: #143a65;
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    .additional-card img {
+      margin-bottom: 16px;
+    }
+    
+    .process-section {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .process-header {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      width: 100%;
+    }
+    
+    .process-step {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 30px 16px;
+      background-color: #072544;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      border-image: linear-gradient(180deg, #12355d 0%, #9d00ff 100%);
+      border-image-slice: 1;
+      text-align: center;
+    }
+    
+    .step-number {
+      font-size: 37px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 46px;
+      color: #ffffff;
+      padding: 12px 24px 18px 24px;
+      background: linear-gradient(180deg, #9d00ff 0%, #5e0099 100%);
+      border-radius: 42px;
+    }
+    
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .cta-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 78px 56px;
+      background-color: #143a65;
+      border-radius: 12px;
+      text-align: center;
+    }
+    
+    /* Typography */
+    .hero-title {
+      font-size: 32px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 48px;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 26px;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #9700f6 0%, #0aeeff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 18px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      color: #bababa;
+      margin-bottom: 40px;
+    }
+    
+    .section-title {
+      font-size: 28px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      line-height: 42px;
+      text-align: center;
+      color: #ffffff;
+    }
+    
+    .section-subtitle {
+      font-size: 18px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      color: #daedfd;
+    }
+    
+    .service-title {
+      font-size: 20px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+      color: #ffffff;
+    }
+    
+    .service-description {
+      font-size: 16px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 19px;
+      color: #bababa;
+    }
+    
+    .service-features {
+      font-size: 15px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+      color: #ffffff;
+      white-space: pre-line;
+      align-self: flex-start;
+      margin-left: 22px;
+    }
+    
+    .additional-title {
+      font-size: 24px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 29px;
+      text-align: center;
+      color: #ffffff;
+    }
+    
+    .additional-description {
+      font-size: 16px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 19px;
+      color: #bababa;
+      margin-top: 20px;
+    }
+    
+    .process-title {
+      font-size: 28px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 34px;
+      color: #ffffff;
+    }
+    
+    .process-subtitle {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      line-height: 27px;
+      color: #bababa;
+    }
+    
+    .step-title {
+      font-size: 22px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 26px;
+      color: #ffffff;
+    }
+    
+    .step-description {
+      font-size: 18px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 300;
+      line-height: 22px;
+      text-align: center;
+      color: #bababa;
+    }
+    
+    .cta-title {
+      font-size: 24px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 29px;
+      color: #ffffff;
+      margin-bottom: 22px;
+    }
+    
+    .cta-description {
+      font-size: 18px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      color: #bababa;
+      margin-bottom: 48px;
+    }
+    
+    /* Interactive states */
+    .btn-primary {
+      font-size: 24px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 29px;
+      text-align: center;
+      color: #ffffff;
+      padding: 14px 34px;
+      background: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(157, 0, 255, 0.3);
+    }
+    
+    .btn-secondary {
+      font-size: 16px;
+      font-family: 'Calibri', sans-serif;
+      font-weight: 700;
+      line-height: 20px;
+      text-align: center;
+      color: #ffffff;
+      padding: 12px 34px;
+      background-color: #143a65;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      border-image: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      border-image-slice: 1;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .btn-secondary:hover {
+      background: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      transform: scale(1.02);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(157, 0, 255, 0.2);
+    }
+    
+    .additional-card:hover {
+      transform: translateY(-3px);
+      background-color: #1a4a7a;
+    }
+    
+    .process-step:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(157, 0, 255, 0.15);
+    }
+    
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+      .container {
+        padding: 0 24px;
+      }
+      
+      .hero-title {
+        font-size: 42px;
+        line-height: 63px;
+      }
+      
+      .hero-subtitle {
+        font-size: 22px;
+        line-height: 27px;
+      }
+      
+      .section-title {
+        font-size: 32px;
+        line-height: 48px;
+      }
+      
+      .section-subtitle {
+        font-size: 22px;
+        line-height: 27px;
+      }
+      
+      .additional-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 32px;
+      }
+      
+      .hero-title {
+        font-size: 52px;
+        line-height: 78px;
+      }
+      
+      .hero-subtitle {
+        font-size: 26px;
+        line-height: 32px;
+      }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      
+      .section-title {
+        font-size: 38px;
+        line-height: 57px;
+      }
+      
+      .section-subtitle {
+        font-size: 26px;
+        line-height: 32px;
+      }
+      
+      .service-title {
+        font-size: 24px;
+        line-height: 29px;
+      }
+      
+      .service-description {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      
+      .additional-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .process-title {
+        font-size: 32px;
+        line-height: 39px;
+      }
+      
+      .cta-title {
+        font-size: 28px;
+        line-height: 34px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 64px;
+        line-height: 96px;
+      }
+      
+      .hero-subtitle {
+        font-size: 32px;
+        line-height: 39px;
+      }
+      
+      .btn-primary {
+        font-size: 40px;
+        line-height: 49px;
+      }
+      
+      .section-title {
+        font-size: 48px;
+        line-height: 72px;
+      }
+      
+      .section-subtitle {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      
+      .service-title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      
+      .service-description {
+        font-size: 26px;
+        line-height: 31px;
+      }
+      
+      .service-features {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      
+      .additional-title {
+        font-size: 28px;
+        line-height: 34px;
+      }
+      
+      .additional-description {
+        font-size: 27px;
+        line-height: 32px;
+      }
+      
+      .process-title {
+        font-size: 46px;
+        line-height: 57px;
+      }
+      
+      .cta-title {
+        font-size: 40px;
+        line-height: 49px;
+      }
+      
+      .cta-description {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      
+      .btn-secondary {
+        font-size: 27px;
+        line-height: 33px;
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .container {
+        padding: 0 40px;
+      }
+    }
+  </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fkrishsap6377back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body>
+  <div class="container">
+    <main class="main-container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-line"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="gradient-text">Web & App Development </span>Services
+          </h1>
+          <p class="hero-subtitle">
+            Comprehensive web and mobile development solutions designed to accelerate your business growth and digital transformation.
+          </p>
+          <a href="#contact" class="btn-primary">Start Your Project</a>
+        </div>
+      </section>
+
+      <!-- Core Services Section -->
+      <section class="services-section">
+        <div class="services-header">
+          <h2 class="section-title">
+            Our <span class="gradient-text">Core Services</span>
+          </h2>
+          <p class="section-subtitle">
+            End-to-end development solutions tailored to your specific business requirements and goals.
+          </p>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Full-Stack Web Development -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <img src="../assets/images/img_material_symbols_code_rounded.svg" alt="Code icon" />
+              </div>
+              <h3 class="service-title">Full-Stack Web Development</h3>
+            </div>
+            <p class="service-description">
+              Complete web application development using modern technologies like React, Next.js, Node.js, and TypeScript.
+            </p>
+            <div class="service-features">
+Key Features:
+
+React & Next.js Applications
+RESTful API Development
+Database Design & Integration
+Real-time Features
+Performance Optimization
+
+Technologies:
+React, Next.js, Typescript, Node.js, PostgreSQL, MongoDB
+            </div>
+          </article>
+
+          <!-- SaaS Platforms & Admin Dashboards -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="circle-icon">
+                <img src="../assets/images/img_ellipse_1.png" alt="Background circle" />
+                <img src="../assets/images/img_ic_outline_cloud.svg" alt="Cloud icon" />
+              </div>
+              <h3 class="service-title">SaaS Platforms & Admin Dashboards</h3>
+            </div>
+            <p class="service-description">
+              Scalable software-as-a-service platforms with comprehensive admin panels and user management systems.
+            </p>
+            <div class="service-features">
+Key Features:
+
+Multi-tenant Architecture
+User Authentication & Authorization
+Payment Integration
+Analytics & Reporting
+Role-based Access Control
+
+Technologies:
+React, Node.js, Stripe, AWS, Redis
+            </div>
+          </article>
+
+          <!-- Android/iOS Mobile Apps -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="circle-icon">
+                <img src="../assets/images/img_ellipse_1.png" alt="Background circle" />
+                <img src="../assets/images/img_pepicons_pencil.svg" alt="Mobile icon" />
+              </div>
+              <h3 class="service-title">Android/iOS Mobile Apps</h3>
+            </div>
+            <p class="service-description">
+              Native and cross-platform mobile applications with seamless user experiences and modern UI/UX design.
+            </p>
+            <div class="service-features">
+Key Features:
+
+Native iOS & Android Apps
+Cross-platform Solutions
+Offline Functionality
+Push Notifications
+App Store Optimization
+
+Technologies:
+React Native, Flutter, Swift, Kotlin, Firebase
+            </div>
+          </article>
+
+          <!-- Website-as-a-Service (WaaS) -->
+          <article class="service-card">
+            <div class="service-header">
+              <div class="circle-icon">
+                <img src="../assets/images/img_ellipse_1.png" alt="Background circle" />
+                <img src="../assets/images/img_iconoir_code_brackets.svg" alt="Code brackets icon" />
+              </div>
+              <h3 class="service-title">Website-as-a-Service (WaaS)</h3>
+            </div>
+            <p class="service-description">
+              Complete website solutions including hosting, maintenance, updates, and ongoing support services.
+            </p>
+            <div class="service-features">
+Key Features:
+
+Custom Website Design
+Hosting & Domain Management
+Regular Updates & Maintenance
+SEO Optimization
+Analytics & Monitoring
+
+Technologies:
+React, Vercel, Netlify, WordPress, Webflow
+            </div>
+          </article>
+
+          <!-- Progressive Web Apps (PWAs) -->
+          <article class="service-card" style="grid-column: 1 / -1; max-width: 610px; margin: 0 auto;">
+            <div class="service-header">
+              <div class="circle-icon">
+                <img src="../assets/images/img_ellipse_1.png" alt="Background circle" />
+                <img src="../assets/images/img_circum_globe.svg" alt="Globe icon" />
+              </div>
+              <h3 class="service-title">Progressive Web Apps (PWAs)</h3>
+            </div>
+            <p class="service-description">
+              Fast, reliable, and engaging web applications that provide native app-like experiences across all devices.
+            </p>
+            <div class="service-features">
+Key Features:
+
+Offline Functionality
+Push Notifications
+App-like Experience
+Fast Loading Times
+Cross-platform Compatibility
+
+Technologies:
+Service Workers, WebAssembly, IndexedDB, WebAPIs
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Additional Services Section -->
+      <section class="additional-services">
+        <div class="additional-header">
+          <h2 class="section-title">
+            Additional <span class="gradient-text">Services</span>
+          </h2>
+          <p class="section-subtitle" style="color: #6d6a6a;">
+            Complementary services to enhance your digital presence and capabilities.
+          </p>
+        </div>
+        
+        <div class="additional-grid">
+          <article class="additional-card">
+            <img src="../assets/images/img_material_symbol.png" alt="Database icon" width="66" height="66" />
+            <h3 class="additional-title">Database Design & Optimization</h3>
+            <p class="additional-description">
+              Efficient database architecture and performance tuning.
+            </p>
+          </article>
+          
+          <article class="additional-card">
+            <img src="../assets/images/img_material_symbols_lock.png" alt="Security icon" width="54" height="54" />
+            <h3 class="additional-title">Security Audits</h3>
+            <p class="additional-description">
+              Comprehensive security assessments and vulnerability testing.
+            </p>
+          </article>
+          
+          <article class="additional-card">
+            <img src="../assets/images/img_lets_icons_group_fill.png" alt="Team icon" width="48" height="48" />
+            <h3 class="additional-title">Team Augmentation</h3>
+            <p class="additional-description">
+              Skilled developers to extend your existing development team.
+            </p>
+          </article>
+          
+          <article class="additional-card">
+            <img src="../assets/images/img_ic_baseline_palette.png" alt="Design icon" width="48" height="48" />
+            <h3 class="additional-title">UI/UX Design</h3>
+            <p class="additional-description">
+              User-centered design for optimal user experience and engagement.
+            </p>
+          </article>
+          
+          <article class="additional-card">
+            <img src="../assets/images/img_material_symbol_44x44.png" alt="Performance icon" width="44" height="44" />
+            <h3 class="additional-title">SEO & Performance</h3>
+            <p class="additional-description">
+              Search engine optimization and website performance enhancement.
+            </p>
+          </article>
+          
+          <article class="additional-card">
+            <img src="../assets/images/img_ic_outline_cloud_40x40.png" alt="Cloud icon" width="40" height="40" />
+            <h3 class="additional-title">Cloud Migration</h3>
+            <p class="additional-description">
+              Seamless migration to cloud platforms with minimal downtime.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Development Process Section -->
+      <section class="process-section">
+        <div class="process-header">
+          <h2 class="process-title">Our Development Process</h2>
+          <p class="process-subtitle">
+            A proven methodology that ensures successful project delivery.
+          </p>
+        </div>
+        
+        <div class="process-steps">
+          <article class="process-step">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Discovery</h3>
+            <p class="step-description">Understanding your requirements and goals</p>
+          </article>
+          
+          <article class="process-step">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Planning</h3>
+            <p class="step-description">Creating detailed project roadmap and timeline</p>
+          </article>
+          
+          <article class="process-step">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Development</h3>
+            <p class="step-description">Building your solution with regular updates</p>
+          </article>
+          
+          <article class="process-step">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Launch</h3>
+            <p class="step-description">Deployment, testing, and ongoing support</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section" id="contact">
+        <div class="cta-card">
+          <h2 class="cta-title">
+            Ready to <span class="gradient-text">Start Your Project?</span>
+          </h2>
+          <p class="cta-description">
+            Get a free consultation and project estimate. Let's discuss how we can bring your vision to life.
+          </p>
+          <a href="#consultation" class="btn-secondary">Get Free Consultation</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
