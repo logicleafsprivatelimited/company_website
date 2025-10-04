@@ -266,6 +266,35 @@ form {
   line-height: 1.5;
 }
 
+/* --- Map Section --- */
+.map-section {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.map-section a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1E5798;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 0; /* Removes potential whitespace below image */
+}
+
+.map-section a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(30, 87, 152, 0.4);
+}
+
+.map-section img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes potential whitespace below image */
+}
+
+
 /* --- Bottom CTA Section --- */
 .cta-section {
   width: 100%;
@@ -516,22 +545,3 @@ form {
     }
 }
 
-
-/* =========================== */
-/* == NEW MAP STYLES START  == */
-/* =========================== */
-.map-section {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 24px;
-}
-
-#map {
-    width: 100%;
-    height: 450px; /* Crucial for the map to be visible */
-    border-radius: 12px;
-    border: 1px solid #1E5798;
-}
-/* ========================= */
-/* == NEW MAP STYLES END  == */
-/* ========================= */
