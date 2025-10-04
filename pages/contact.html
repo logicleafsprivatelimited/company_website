@@ -109,8 +109,11 @@
             </section>
 
             <section class="map-section">
-                <div id="map"></div>
+                <a href="https://www.google.com/maps/place/BM+Habitat+Mall/@12.3213871,76.6183173,17z/data=!3m1!4b1!4m6!3m5!1s0x3baf7a92f691aef7:0xa9fd3fb12dc539f8!8m2!3d12.3213819!4d76.6208922!16s%2Fm%2F0j7lytz?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D">
+                    <img src="../assets/maps.JPG" alt="BM Habitat Mall Location" style="width:100%; height:auto;">
+                </a>
             </section>
+            
             <section class="cta-section">
                 <h2 class="cta-title">Ready to Start a Conversation?</h2>
                 <p class="cta-subtitle">
@@ -155,7 +158,7 @@
                         <a href="https://www.linkedin.com/company/logicleafs/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://api.whatsapp.com/send/?phone=9019225051&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    </div>
+                </div>
 
                 <div class="footer-col footer-links">
                     <h4 class="footer-title">Quick Links</h4>
@@ -181,31 +184,5 @@
             </p>
         </div>
     </footer>
-
-    <script>
-        function initMap() {
-            // The location of your company
-            const companyLocation = { lat: 12.320140, lng: 76.634110 }; 
-
-            // Dark mode style for the map to match your website theme
-            const mapStyle = [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] }, { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }], }, { featureType: "poi", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }], }, { featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#263c3f" }], }, { featureType: "poi.park", elementType: "labels.text.fill", stylers: [{ color: "#6b9a76" }], }, { featureType: "road", elementType: "geometry", stylers: [{ color: "#38414e" }], }, { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#212a37" }], }, { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#9ca5b3" }], }, { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#746855" }], }, { featureType: "road.highway", elementType: "geometry.stroke", stylers: [{ color: "#1f2835" }], }, { featureType: "road.highway", elementType: "labels.text.fill", stylers: [{ color: "#f3d19c" }], }, { featureType: "transit", elementType: "geometry", stylers: [{ color: "#2f3948" }], }, { featureType: "transit.station", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }], }, { featureType: "water", elementType: "geometry", stylers: [{ color: "#17263c" }], }, { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#515c6d" }], }, { featureType: "water", elementType: "labels.text.stroke", stylers: [{ color: "#17263c" }], }, ];
-
-            // The map, centered at your company location
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 17,
-                center: companyLocation,
-                styles: mapStyle,
-                disableDefaultUI: true,
-            });
-
-            // The marker, positioned at your company location
-            const marker = new google.maps.Marker({
-                position: companyLocation,
-                map: map,
-                title: "LogicLeafs",
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-    </body>
+</body>
 </html>
