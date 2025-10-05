@@ -408,3 +408,18 @@ body {
         justify-content: flex-start;
     }
 }
+/* Video Wrapper */
+.services-video-wrapper {
+    margin: 40px auto;
+    max-width: 1000px;   /* restricts video size */
+    border-radius: 12px; /* smooth edges */
+    overflow: hidden;    /* crop edges */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.services-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
