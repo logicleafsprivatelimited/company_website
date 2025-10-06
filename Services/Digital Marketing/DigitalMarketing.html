@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comprehensive Digital Marketing Services | Drive Results & Growth</title>
+  <meta name="description" content="Professional digital marketing solutions including social media marketing, SEO, content marketing, Google Ads, and brand identity design. Drive results and grow your business with our expert services." />
+  <meta name="keywords" content="digital marketing, social media marketing, SEO, content marketing, Google Ads, brand identity design, online marketing services" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====== GLOBAL RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #072544;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+	
+	
+
+    /* ====== UTILITIES ====== */
+    .container {
+      width: 80%;
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero-section {
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: #e0e0e0;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 28px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(90deg, #bf00ff 0%, #27bffe 100%);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(191, 0, 255, 0.3);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+    }
+	
+	/* === HERO VIDEO SECTION (new styles, no override) === */
+	/* Force full width video hero */
+	.hero-video-section {
+	  position: relative;
+	  width: 100vw;
+	  left: 50%;
+	  right: 50%;
+	  margin-left: -50vw;
+	  margin-right: -50vw;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  text-align: center;
+	  overflow: hidden;
+	  color: #fff;
+	  height: 80vh;
+	  padding-top: 0;
+	}
+
+	.hero-video-bg {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  transform: translate(-50%, -50%)scale(1.3);
+	  z-index: 0;
+	  opacity: 1;
+	}
+
+
+	/* Optional dark overlay for readability */
+	.hero-video-section::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.25); z-index: 0; }
+	.hero-video-content { position: relative; z-index: 1; padding: 0 20px; }
+	.hero-video-title { font-size: 54px; line-height: 1.2; font-weight: 800; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
+	.hero-video-title .accent { background: linear-gradient(90deg, #00ffff, #00ff99); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+	.hero-video-subtitle { font-size: 18px; color: #e6e6e6; max-width: 700px; margin: 0 auto 40px; line-height: 1.6; }
+	.hero-video-btn { display: inline-block; background: linear-gradient(90deg, #7000ff, #00ffff); padding: 14px 36px; border-radius: 8px; color: #fff; font-size: 18px; font-weight: 600; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+	.hero-video-btn:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); }
+	@media (max-width: 768px) { .hero-video-title { font-size: 36px; } .hero-video-subtitle { font-size: 16px; } }
+
+	
+    /* ====== SERVICES SECTION ====== */
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .service-card {
+      background-color: #072544;
+      border: 1px solid;
+      border-image-source: linear-gradient(180deg, #1b5290 0%, #00ffff 100%);
+      border-image-slice: 1;
+      border-radius: 8px;
+      padding: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.7s ease-out forwards;
+    }
+
+    .service-card:nth-child(2) { animation-delay: 0.1s; }
+    .service-card:nth-child(3) { animation-delay: 0.2s; }
+    .service-card:nth-child(4) { animation-delay: 0.3s; }
+    .service-card:nth-child(5) { animation-delay: 0.4s; }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(180deg, rgba(157, 0, 255, 0.5) 0%, rgba(17, 53, 93, 0.8) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .service-subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;
+      color: #e0e0e0;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      color: #b9b9b9;
+      margin-bottom: 20px;
+    }
+
+    .features-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .features-list {
+      list-style: none;
+      padding-left: 18px;
+    }
+
+    .features-list li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 14px;
+      color: #adadad;
+      line-height: 1.8;
+    }
+
+    .features-list li::before {
+      content: "•";
+      position: absolute;
+      left: -10px;
+      color: #00ffff;
+    }
+
+    /* ====== CTA SECTION ====== */
+    .cta-section {
+      background-color: #11355d;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .cta-subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {padding:60px 0 30px;background-color:#0b2f57;margin-top:80px;}
+    .footer-content {display:grid;grid-template-columns:1fr;gap:40px;text-align:center;padding:0 24px;}
+    .footer-logo {width:150px;margin-bottom:20px;}
+    .footer-tagline {font-size:16px;color:#E6F1FF;margin-bottom:10px;}
+    .footer-description {font-size:14px;color:#adadad;max-width:400px;margin:0 auto 25px;}
+    .footer-contact-card {background-color:#1B4571;border-radius:8px;padding:12px 18px;margin-bottom:15px;max-width:350px;margin-left:auto;margin-right:auto;}
+    .contact-item {display:flex;align-items:flex-start;gap:12px;color:#E6F1FF;font-size:14px;}
+    .footer-title {font-size:18px;font-weight:600;color:#E6F1FF;margin-bottom:15px;}
+    .footer-link {font-size:14px;color:#adadad;text-decoration:none;transition:color .3s ease;display:block;margin-bottom:8px;}
+    .footer-link:hover {color:#00FFFF;}
+    .social-links {display:flex;justify-content:center;gap:20px;margin-top:25px;}
+    .social-links a {color:#ffffff;font-size:22px;transition:color .3s ease,transform .3s ease;}
+    .social-links a:hover {color:#00FFFF;transform:translateY(-3px);}
+    .footer-divider {height:1px;background-color:#2e5a8a;margin:30px 24px;}
+    .footer-copyright {text-align:center;font-size:13px;color:#adadad;}
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-title {
+        font-size: 52px;
+      }
+
+      .cta-title {
+        font-size: 42px;
+      }
+
+      .footer-content {
+        grid-template-columns: 2fr 1fr 1.5fr;
+        text-align: left;
+        gap: 50px;
+      }
+
+      .footer-link,
+      .footer-title {
+        text-align: left;
+      }
+
+      .social-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main-container">
+  
+  		<section class="hero-video-section">
+		  <video autoplay muted loop playsinline class="hero-video-bg">
+			<source src="../../AI Videos/Digital Marketing_Final.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+
+		  <div class="hero-video-content">
+			<h1 class="hero-video-title">Comprehensive <span class="gradient-text">Digital Marketing</span> Services</h1>
+			<p class="hero-video-subtitle">
+			  We offer end-to-end digital marketing solutions that drive results and help your business grow.
+			</p>
+			<a href="#consultation" class="btn-primary">Start your Project
+			<img src="assets/images/img_arrowright.svg" alt="Arrow right" class="btn-icon" />
+		  </a>
+		  </div>
+		</section>
+  
+    <br>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+      <div class="services-container">
+        <h2 class="section-title">
+          Our <span class="gradient-text">Services</span>
+        </h2>
+
+        <div class="services-grid">
+          <!-- Social Media Marketing -->
+          <article class="service-card">
+            <div class="service-content">
+              <div class="service-header">
+                <div class="service-icon">
+                  <img src="assets/images/img_heroicons_device_phone_mobile.svg" alt="Social media marketing icon" width="46" height="46" />
+                </div>
+                <h3 class="service-title">Social media marketing</h3>
+              </div>
+              
+              <div class="service-columns">
+                <div class="service-details">
+                  <h4 class="service-subtitle">Engage Your Audience & Build Brand Awareness</h4>
+                  <p class="service-description">
+                    Our social media marketing services help you connect with your audience, build brand loyalty, and drive meaningful engagement across platforms.
+                  </p>
+                </div>
+                
+                <div class="service-features">
+                  <h5 class="features-title">Key Features:</h5>
+                  <ul class="features-list">
+                    <li>Platform Strategy & Management</li>
+                    <li>Content Creation & Curation</li>
+                    <li>Community Management</li>
+                    <li>Analytics & Reporting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Search Engine Optimization -->
+          <article class="service-card">
+            <div class="service-content">
+              <div class="service-header">
+                <div class="service-icon">
+                  <img src="assets/images/search.png" alt="Search engine optimization icon" width="40" height="40" />
+                </div>
+                <h3 class="service-title">Search Engine Optimization</h3>
+              </div>
+              
+              <div class="service-columns">
+                <div class="service-details">
+                  <h4 class="service-subtitle">Improve Your Search Rankings & Drive Organic Traffic</h4>
+                  <p class="service-description">
+                    Our comprehensive SEO services help your business rank higher in search engine results, increasing your visibility and driving more qualified traffic to your website.
+                  </p>
+                </div>
+                
+                <div class="service-features">
+                  <h5 class="features-title">Key Features:</h5>
+                  <ul class="features-list">
+                    <li>Technical SEO Audits</li>
+                    <li>Keyword Research & Strategy</li>
+                    <li>On-Page Optimization</li>
+                    <li>Backlink Building</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Content Marketing -->
+          <article class="service-card">
+            <div class="service-content">
+              <div class="service-header">
+                <div class="service-icon">
+                  <img src="assets/images/img_mingcute_pen_fill.svg" alt="Content marketing icon" width="42" height="42" />
+                </div>
+                <h3 class="service-title">Content Marketing</h3>
+              </div>
+              
+              <div class="service-columns">
+                <div class="service-details">
+                  <h4 class="service-subtitle">Create Valuable Content That Drives Conversions</h4>
+                  <p class="service-description">
+                    Our content marketing services help you tell your brand story, establish authority, and connect with your audience through valuable, relevant content.
+                  </p>
+                </div>
+                
+                <div class="service-features">
+                  <h5 class="features-title">Key Features:</h5>
+                  <ul class="features-list">
+                    <li>Content Strategy</li>
+                    <li>Blog Writing & Management</li>
+                    <li>Premium Content Creation</li>
+                    <li>Content Distribution</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Google Ads & Paid Campaigns -->
+          <article class="service-card">
+            <div class="service-content">
+              <div class="service-header">
+                <div class="service-icon">
+                  <img src="assets/images/img_mingcute_target_fill.svg" alt="Google Ads and paid campaigns icon" width="44" height="44" />
+                </div>
+                <h3 class="service-title">Google Ads & Paid Campaigns</h3>
+              </div>
+              
+              <div class="service-columns">
+                <div class="service-details">
+                  <h4 class="service-subtitle">Reach the Right Audience with Targeted Advertising</h4>
+                  <p class="service-description">
+                    Our Google Ads and paid campaign services help you increase visibility, generate qualified leads, and maximize ROI through data-driven ad strategies tailored to your business goals.
+                  </p>
+                </div>
+                
+                <div class="service-features">
+                  <h5 class="features-title">Key Features:</h5>
+                  <ul class="features-list">
+                    <li>Campaign Strategy & Setup</li>
+                    <li>Keyword Research & Targeting</li>
+                    <li>Ad Copywriting & Design</li>
+                    <li>Performance Tracking & Optimization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Logo & Brand Identity Design -->
+          <article class="service-card">
+            <div class="service-content">
+              <div class="service-header">
+                <div class="service-icon">
+                  <img src="assets/images/img_ic_baseline_palette.svg" alt="Logo and brand identity design icon" width="40" height="40" />
+                </div>
+                <h3 class="service-title">Logo & Brand Identity Design</h3>
+              </div>
+              
+              <div class="service-columns">
+                <div class="service-details">
+                  <h4 class="service-subtitle">Craft a Memorable Identity That Reflects Your Brand</h4>
+                  <p class="service-description">
+                    Our logo and brand identity design services help you build a strong, recognizable presence with visuals that capture your brand's personality and values.
+                  </p>
+                </div>
+                
+                <div class="service-features">
+                  <h5 class="features-title">Key Features:</h5>
+                  <ul class="features-list">
+                    <li>Custom Logo Design</li>
+                    <li>Brand Color Palette & Typography</li>
+                    <li>Brand Guidelines Development</li>
+                    <li>Visual Assets & Collateral Design</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+	
+	<br><br>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2 class="cta-title">
+        Ready to Elevate Your <span class="gradient-text">Digital Marketing</span> Strategy?
+      </h2>
+      <p class="cta-subtitle">
+        Schedule a free consultation with our experts to discuss how we can help your business grow.
+      </p>
+      <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col footer-info">
+                    <img src="../../assets/logics.png" alt="Logic Leafs Logo" class="footer-logo">
+                    <p class="footer-tagline">Built with Logic. Grown with Innovation.</p>
+                    <p class="footer-description">
+                        Next-gen technology partner transforming ideas into scalable digital solutions through AI, Blockchain, SaaS, and innovative product engineering.
+                    </p>
+                    <div class="footer-contact-card">
+                        <div class="contact-item">
+                            <img src="../../assets/images/img_carbon_location_filled.png" alt="Location" width="22" height="22" />
+                            <span>2nd Floor, BM Habitat Mall, Jayalakshmipuram Mysore, Karnataka, 570012</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact-card">
+                        <div class="contact-item">
+                            <img src="../../assets/images/img_ion_call.png" alt="Phone" width="22" height="22" />
+                            <span>‪+91 97311 95345‬</span>
+                        </div>
+                    </div>
+                    <div class="footer-contact-card">
+                        <div class="contact-item">
+                            <img src="../../assets/images/img_ic_round_email.png" alt="Email" width="22" height="22" />
+                            <span>info@logicleafs.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/logicleafs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/logicleafs/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=9019225051&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Careers</a>
+                </div>
+                <div class="footer-col footer-services">
+                    <h4 class="footer-title">Our Services</h4>
+                    <a href="services.html" class="footer-link">AI & Software Development</a>
+                    <a href="services.html" class="footer-link">Web & App Development</a>
+                    <a href="services.html" class="footer-link">Digital Marketing</a>
+                    <a href="services.html" class="footer-link">Startup Consulting</a>
+                    <a href="services.html" class="footer-link">R&D Projects</a>
+                    <a href="services.html" class="footer-link">Training Programs</a>
+                </div>
+            </div>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">
+        © 2024 Logic Leafs Private Limited. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Software Development Services | Custom ML Solutions</title>
+  <meta name="description" content="Comprehensive artificial intelligence and machine learning solutions designed to revolutionize your business operations. Custom AI models, predictive analytics, NLP, computer vision, and chatbot development services." />
+  <meta name="keywords" content="AI development, machine learning, artificial intelligence, custom AI models, predictive analytics, natural language processing, computer vision, chatbot development" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Reset and Base Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #072544;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+    .main-container {
+      width:100%;
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+	
+	.container {
+      width:80%;
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero-title {
+      font-size: 42px;
+      line-height: 1.3;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text-primary {
+      background: linear-gradient(90deg, #9d00ff 0%, #00ffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-text-secondary {
+      background: linear-gradient(90deg, #bf00ff 0%, #ff10f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: #cfcfcf;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 28px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(90deg, #bf00ff 0%, #27bffe 100%);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(191, 0, 255, 0.3);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+    }
+	
+	.hero-video-btn-icon {
+      width: 20px;
+      height: 20px;
+    } 
+	
+	/* === HERO VIDEO SECTION (new styles, no override) === */
+		/* Force full width video hero */
+		.hero-video-section {
+		  position: relative;
+		  width: 100vw;
+		  left: 50%;
+		  right: 50%;
+		  margin-left: -50vw;
+		  margin-right: -50vw;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  text-align: center;
+		  overflow: hidden;
+		  color: #fff;
+		  height: 80vh;
+		  padding-top: 0;
+		}
+
+		.hero-video-bg {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		  transform: translate(-50%, -50%)scale(1.3);
+		  z-index: 0;
+		  opacity: 1;
+		}
+
+
+	/* Optional dark overlay for readability */
+	.hero-video-section::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.25); z-index: 0; }
+	.hero-video-content { position: relative; z-index: 1; padding: 0 20px; max-width: 900px; }
+	.hero-video-title { font-size: 56px; line-height: 1.2; font-weight: 800; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
+	.hero-video-title .accent { background: linear-gradient(90deg, #00ffff, #00ff99); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+	.hero-video-subtitle { font-size: 18px; color: #e6e6e6; max-width: 700px; margin: 0 auto 40px; line-height: 1.6; }
+	.hero-video-btn { display: inline-block; background: linear-gradient(90deg, #7000ff, #00ffff); padding: 14px 36px; border-radius: 8px; color: #fff; font-size: 18px; font-weight: 600; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+	.hero-video-btn:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); }
+	@media (max-width: 768px) { .hero-video-title { font-size: 36px; } .hero-video-subtitle { font-size: 16px; } }
+
+
+    /* --- Project Images --- */
+    .project-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .project-images img {
+      max-width: 280px;
+      border-radius: 8px;
+    }
+
+    /* --- Services Section --- */
+    .services-section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: #cfcfcf;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: #072544;
+      border: 1px solid;
+      border-image-source: linear-gradient(180deg, #1b5290 0%, #00ffff 100%);
+      border-image-slice: 1;
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.15);
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+    }
+
+    .service-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .service-description {
+      font-size: 15px;
+      color: #d8d8d8;
+      text-align: left;
+      line-height: 1.7;
+    }
+
+    /* --- Process Section --- */
+    .process-section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .process-card {
+      background-color: #072544;
+      border: 2px solid transparent;
+      border-image: linear-gradient(180deg, #12355d 0%, #bf00ff 100%);
+      border-image-slice: 1;
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .process-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #bf00ff 0%, #4f0368 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin: 0 auto 10px;
+    }
+
+    .process-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .process-description {
+      font-size: 14px;
+      color: #bcbcbc;
+    }
+
+    /* --- CTA Section --- */
+    .cta-section {
+      text-align: center;
+      background-color: #11355D;
+      padding: 80px 20px;
+    }
+
+    .cta-card {
+      max-width: 1480px;
+      margin: 0 auto;
+      background-color: #143a65;
+      padding: 40px 30px;
+      border-radius: 12px;
+    }
+
+    .cta-title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .cta-subtitle {
+      font-size: 17px;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 16px;
+      color: #fff;
+      border: 1px solid #00ffff;
+      border-radius: 8px;
+      background-color: #072544;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #1a4a7a;
+      transform: scale(1.05);
+    }
+
+   /* ===== FOOTER ===== */
+    .footer {padding:60px 0 30px;background-color:#0b2f57;margin-top:80px;}
+    .footer-content {display:grid;grid-template-columns:1fr;gap:40px;text-align:center;padding:0 24px;}
+    .footer-logo {width:150px;margin-bottom:20px;}
+    .footer-tagline {font-size:16px;color:#E6F1FF;margin-bottom:10px;}
+    .footer-description {font-size:14px;color:#adadad;max-width:400px;margin:0 auto 25px;}
+    .footer-contact-card {background-color:#1B4571;border-radius:8px;padding:12px 18px;margin-bottom:15px;max-width:350px;margin-left:auto;margin-right:auto;}
+    .contact-item {display:flex;align-items:flex-start;gap:12px;color:#E6F1FF;font-size:14px;}
+    .footer-title {font-size:18px;font-weight:600;color:#E6F1FF;margin-bottom:15px;}
+    .footer-link {font-size:14px;color:#adadad;text-decoration:none;transition:color .3s ease;display:block;margin-bottom:8px;}
+    .footer-link:hover {color:#00FFFF;}
+    .social-links {display:flex;justify-content:center;gap:20px;margin-top:25px;}
+    .social-links a {color:#ffffff;font-size:22px;transition:color .3s ease,transform .3s ease;}
+    .social-links a:hover {color:#00FFFF;transform:translateY(-3px);}
+    .footer-divider {height:1px;background-color:#2e5a8a;margin:30px 24px;}
+    .footer-copyright {text-align:center;font-size:13px;color:#adadad;}
+	
+
+    /* --- Responsive --- */
+    @media (min-width: 768px) {
+      .hero-title { font-size: 52px; }
+      .services-grid { gap: 40px; }
+      .footer-content {
+        grid-template-columns: 2fr 1fr 1.5fr;
+        text-align: left;
+      }
+      .social-links {
+        justify-content: flex-start;
+      }
+    }
+	
+	.hero-video-section {
+	  margin-top: 0 !important;
+	  padding-top: 0 !important;
+	}
+
+	.main-container, .container {
+	  padding-top: 0 !important;
+	  margin-top: 0 !important;
+	}
+  </style>
+</head>
+
+<body>
+  <main class="main-container">
+  
+		<section class="hero-video-section">
+		  <video autoplay muted loop playsinline class="hero-video-bg">
+			<source src="../../AI Videos/AI_Final.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+
+		  <div class="hero-video-content">
+			<h1 class="hero-video-title"><span class="accent">AI & Software Development</span></h1>
+			<p class="hero-video-subtitle">
+			  Comprehensive artificial intelligence and machine learning solutions designed to revolutionize your business operations and drive innovation.
+			</p>
+			<a href="#consultation" class="btn-primary">Start your Project
+			<img src="assets/images/img_arrowright.svg" alt="Arrow right" class="hero-video-btn-icon" />
+		  </a>
+		  </div>
+		</section>
+
+
+
+    <section class="services-section">
+      <h2 class="section-title">Our Comprehensive <span class="gradient-text-primary">AI Services</span></h2>
+      <p class="section-subtitle">From custom AI model development to enterprise-grade deployment, we provide end-to-end artificial intelligence solutions.</p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-header">
+            <img src="assets/images/img_streamline_brain_remix.svg" class="service-icon" alt="">
+            <h3 class="service-title">Custom AI Model Development</h3>
+          </div>
+          <p class="service-description">We develop bespoke AI models tailored to your specific business requirements, from concept to deployment.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <img src="assets/images/img_hugeicons_algorithm.svg" class="service-icon" alt="">
+            <h3 class="service-title">Machine Learning Solutions</h3>
+          </div>
+          <p class="service-description">Comprehensive ML solutions that transform your data into actionable insights and automated decision systems.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <img src="assets/images/img_cil_chart_line.svg" class="service-icon" alt="">
+            <h3 class="service-title">Predictive Analytics Systems</h3>
+          </div>
+          <p class="service-description">Advanced analytics platforms that forecast trends, identify opportunities, and optimize business operations.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <img src="assets/images/img_icon_park_text_recognition.svg" class="service-icon" alt="">
+            <h3 class="service-title">Natural Language Processing</h3>
+          </div>
+          <p class="service-description">Sophisticated language understanding systems that enable intelligent text analysis and human-like communication.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <img src="assets/images/img_gridicons_camera.svg" class="service-icon" alt="">
+            <h3 class="service-title">Computer Vision Applications</h3>
+          </div>
+          <p class="service-description">Visual recognition systems that analyze and process visual data with human-level accuracy.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <img src="assets/images/img_iconoir_microphone_solid.svg" class="service-icon" alt="">
+            <h3 class="service-title">Chatbot & Voicebot Development</h3>
+          </div>
+          <p class="service-description">Intelligent conversational AI systems providing 24/7 customer support and user engagement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <h2 class="section-title">Our <span class="gradient-text-primary">Development Process</span></h2>
+      <p class="section-subtitle">A proven methodology that ensures successful AI implementation and measurable results.</p>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <div class="process-number">01</div>
+          <h3 class="process-title">Discovery & Analysis</h3>
+          <p class="process-description">We analyze your business needs, data assets, and technical requirements to design optimal AI solutions.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">02</div>
+          <h3 class="process-title">Prototype Development</h3>
+          <p class="process-description">Rapid prototyping and proof-of-concept to validate the approach and demonstrate value.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">03</div>
+          <h3 class="process-title">Model Training & Testing</h3>
+          <p class="process-description">Comprehensive model training and testing to ensure accuracy and reliability.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">04</div>
+          <h3 class="process-title">Deployment & Integration</h3>
+          <p class="process-description">Seamless deployment into your systems with minimal disruption.</p>
+        </article>
+
+        <article class="process-card">
+          <div class="process-number">05</div>
+          <h3 class="process-title">Monitoring & Optimization</h3>
+          <p class="process-description">Continuous monitoring and optimization for maximum performance and ROI.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+    <section class="cta-section" id="consultation">
+      <div class="cta-card">
+        <h2 class="cta-title">Ready to <span class="gradient-text-primary">Start Your Project?</span></h2>
+        <p class="cta-subtitle">Get a free consultation and project estimate. Let's discuss how we can bring your vision to life.</p>
+        <a href="#contact" class="btn-secondary">Get Free Consultation</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <img src="../../assets/logics.png" alt="Logic Leafs Logo" class="footer-logo">
+            <p class="footer-tagline">Built with Logic. Grown with Innovation.</p>
+            <p class="footer-description">Next-gen technology partner transforming ideas into scalable digital solutions through AI, Blockchain, SaaS, and product engineering.</p>
+            <div class="footer-contact-card">
+              <div class="contact-item">
+                <img src="../../assets/images/img_carbon_location_filled.png" width="20" height="20">
+                <span>2nd Floor, BM Habitat Mall, Jayalakshmipuram Mysore, Karnataka, 570012</span>
+              </div>
+            </div>
+            <div class="footer-contact-card">
+              <div class="contact-item">
+                <img src="../../assets/images/img_ion_call.png" width="20" height="20">
+                <span>+91 97311 95345</span>
+              </div>
+            </div>
+            <div class="footer-contact-card">
+              <div class="contact-item">
+                <img src="../../assets/images/img_ic_round_email.png" width="20" height="20">
+                <span>info@logicleafs.com</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://www.instagram.com/logicleafs/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/logicleafs/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://api.whatsapp.com/send/?phone=9019225051" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Careers</a>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Our Services</h4>
+            <a href="services.html" class="footer-link">AI & Software Development</a>
+            <a href="services.html" class="footer-link">Web & App Development</a>
+            <a href="services.html" class="footer-link">Digital Marketing</a>
+            <a href="services.html" class="footer-link">Startup Consulting</a>
+            <a href="services.html" class="footer-link">R&D Projects</a>
+            <a href="services.html" class="footer-link">Training Programs</a>
+          </div>
+        </div>
+		</div>
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">© 2024 Logic Leafs Private Limited. All rights reserved.</p>
+      
+    </footer>
+</body>
+</html>

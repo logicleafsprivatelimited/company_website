@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web & App Development Services | Full-Stack Solutions</title>
+  <meta name="description" content="Comprehensive web and mobile development solutions designed to accelerate your business growth and digital transformation." />
+  <meta name="keywords" content="web development, mobile app development, full-stack development, SaaS platforms, progressive web apps, digital transformation" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    html {scroll-behavior:smooth;}
+    body {
+      font-family:'Poppins', sans-serif;
+      background-color:#072544;
+      color:#ffffff;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    .gradient-text {
+      background:linear-gradient(90deg,#9d00ff 0%,#00ffff 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+
+    .main-container {
+      width:100%;
+      max-width:1280px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+	
+	.container {
+      width: 80%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HERO ===== */
+    .hero-section {text-align:center;padding:100px 20px 80px;}
+    .hero-title {
+      font-family:'Montserrat',sans-serif;
+      font-size:48px;
+      font-weight:800;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+    .hero-subtitle {
+      font-size:18px;
+      color:#e0e0e0;
+      margin-bottom:40px;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .hero-button {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 30px;
+      font-size:17px;
+      font-weight:500;
+      color:#fff;
+      background:linear-gradient(90deg,#bf00ff 0%,#27bffe 100%);
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      text-decoration:none;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .hero-button:hover {transform:scale(1.05);box-shadow:0 8px 20px rgba(191,0,255,0.3);}
+	
+	.btn-icon {
+      width: 20px;
+      height: 20px;
+    }
+	
+	/* === HERO VIDEO SECTION (new styles, no override) === */
+	/* Force full width video hero */
+	.hero-video-section {
+	  position: relative;
+	  width: 100vw;
+	  height: 100vh;
+	  left: 50%;
+	  right: 50%;
+	  margin-left: -50vw;
+	  margin-right: -50vw;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  text-align: center;
+	  overflow: hidden;
+	  color: #fff;
+	  height: 80vh;
+	  padding-top: 0;
+	}
+
+	.hero-video-bg {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  transform: translate(-50%, -50%)scale(1.3);
+	  z-index: 0;
+	  opacity: 1;
+	}
+
+
+	/* Optional dark overlay for readability */
+	.hero-video-section::after { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.25); z-index: 0; }
+	.hero-video-content { position: relative; z-index: 1; padding: 0 20px; }
+	.hero-video-title { font-size: 54px; line-height: 1.2; font-weight: 800; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
+	.hero-video-title .accent { background: linear-gradient(90deg, #00ffff, #00ff99); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+	.hero-video-subtitle { font-size: 18px; color: #e6e6e6; max-width: 900px; margin: 0 auto 40px; line-height: 1.6; }
+	.hero-video-btn { display: inline-block; background: linear-gradient(90deg, #7000ff, #00ffff); padding: 14px 36px; border-radius: 8px; color: #fff; font-size: 18px; font-weight: 600; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+	.hero-video-btn:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); }
+	@media (max-width: 768px) { .hero-video-title { font-size: 36px; } .hero-video-subtitle { font-size: 16px; } }
+
+	
+    /* ===== SERVICES ===== */
+    
+    .section-title {
+      font-family:'Montserrat',sans-serif;
+      font-size:38px;
+      font-weight:800;
+      text-align:center;
+      margin-bottom:20px;
+    }
+	.section-subtitle {
+      font-size: 17px;
+      color: #cfcfcf;
+      max-width: 700px;
+      margin: 10px auto 50px;
+	  text-align:center;
+    }
+    .service-card {
+      background-color:#072544;
+      border:1px solid;
+      border-image-source:linear-gradient(180deg,#1b5290 0%,#00ffff 100%);
+      border-image-slice:1;
+      border-radius:10px;
+      padding:32px;
+      margin-bottom:40px;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .service-card:hover {transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,255,255,0.15);}
+
+    .service-header {display:flex;align-items:center;gap:20px;margin-bottom:15px;}
+    .service-icon {width:60px;height:60px;background:linear-gradient(180deg,rgba(157,0,255,.5) 0%,rgba(17,53,93,.8) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+    .service-title {font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;}
+    .service-description {font-size:15px;color:#adadad;margin-top:8px;}
+
+    /* === Circle icon style from old file === */
+    .circle-icon {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .circle-icon img:first-child {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .circle-icon img:last-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+    }
+
+    /* === Additional services from old file === */
+    .additional-services {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .additional-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+    }
+	
+	.additional-subtitle {
+      font-size:16px;
+      color:#e0e0e0;
+      margin-bottom:40px;
+      max-width:800px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .additional-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+    .additional-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 32px 20px;
+      background-color: #143a65;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform .3s ease;
+    }
+    .additional-card:hover {
+      transform: translateY(-3px);
+      background-color: #1a4a7a;
+    }
+    .additional-card img {
+      margin-bottom: 16px;
+    }
+    .additional-title {
+      font-size: 22px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      line-height: 29px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .additional-description {
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      line-height: 19px;
+      color: #bababa;
+      margin-top: 20px;
+    }
+
+    /* ===== PROCESS ===== */
+    .process-section {text-align:center;margin-top:80px;}
+    .process-title {font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;margin-bottom:10px;}
+    .process-subtitle {font-size:18px;color:#e0e0e0;margin-bottom:40px;}
+    .process-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-top:40px;}
+    .process-step {background-color:#11355d;border-radius:10px;padding:30px;transition:transform .3s ease;}
+    .process-step:hover {transform:translateY(-5px);}
+    .step-number {width:60px;height:60px;margin:0 auto 15px;background:linear-gradient(180deg,#bf00ff 0%,#27bffe 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;}
+    .step-title {font-family:'Montserrat',sans-serif;font-size:18px;font-weight:600;margin-bottom:10px;}
+    .step-description {font-size:15px;color:#b9b9b9;}
+	
+	.services-grid {
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  gap: 24px;
+	}
+	@media(min-width:768px){
+	  .services-grid{
+		grid-template-columns:repeat(2,1fr);
+		gap:32px;
+	  }
+      .additional-grid {
+        grid-template-columns: repeat(3,1fr);
+      }
+	}
+
+    /* ===== CTA ===== */
+    .cta-section {
+      width:100%;
+      background-color:#11355d;
+      text-align:center;
+      padding:80px 20px;
+      margin-top:80px;
+    }
+    .cta-section .container {max-width:1280px;margin:0 auto;padding:0 24px;}
+    .cta-title {font-family:'Montserrat',sans-serif;font-size:34px;font-weight:700;margin-bottom:15px;}
+    .cta-subtitle {font-family:'Poppins',sans-serif;font-size:18px;color:#e0e0e0;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto;}
+    .btn-primary {display:inline-flex;align-items:center;gap:10px;padding:10px 28px;font-size:17px;font-weight:500;color:#fff;background:linear-gradient(90deg,#bf00ff 0%,#27bffe 100%);border:none;border-radius:10px;cursor:pointer;text-decoration:none;transition:transform .3s ease, box-shadow .3s ease;}
+    .btn-primary:hover {transform:scale(1.05);box-shadow:0 8px 20px rgba(191,0,255,0.3);}
+
+    /* ===== FOOTER ===== */
+    .footer {padding:60px 0 30px;background-color:#0b2f57;margin-top:80px;}
+    .footer-content {display:grid;grid-template-columns:1fr;gap:40px;text-align:center;padding:0 24px;}
+    .footer-logo {width:150px;margin-bottom:20px;}
+    .footer-tagline {font-size:16px;color:#E6F1FF;margin-bottom:10px;}
+    .footer-description {font-size:14px;color:#adadad;max-width:400px;margin:0 auto 25px;}
+    .footer-contact-card {background-color:#1B4571;border-radius:8px;padding:12px 18px;margin-bottom:15px;max-width:350px;margin-left:auto;margin-right:auto;}
+    .contact-item {display:flex;align-items:flex-start;gap:12px;color:#E6F1FF;font-size:14px;}
+    .footer-title {font-size:18px;font-weight:600;color:#E6F1FF;margin-bottom:15px;}
+    .footer-link {font-size:14px;color:#adadad;text-decoration:none;transition:color .3s ease;display:block;margin-bottom:8px;}
+    .footer-link:hover {color:#00FFFF;}
+    .social-links {display:flex;justify-content:center;gap:20px;margin-top:25px;}
+    .social-links a {color:#ffffff;font-size:22px;transition:color .3s ease,transform .3s ease;}
+    .social-links a:hover {color:#00FFFF;transform:translateY(-3px);}
+    .footer-divider {height:1px;background-color:#2e5a8a;margin:30px 24px;}
+    .footer-copyright {text-align:center;font-size:13px;color:#adadad;}
+
+    @media(min-width:768px){
+      .hero-title{font-size:52px;}
+      .cta-title{font-size:42px;}
+      .process-grid{grid-template-columns:repeat(4,1fr);}
+      .footer-content{grid-template-columns:2fr 1fr 1.5fr;text-align:left;gap:50px;padding:0 48px;}
+      .social-links{justify-content:flex-start;}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main-container">
+  
+	<section class="hero-video-section">
+	  <video autoplay muted loop playsinline class="hero-video-bg">
+		<source src="../../AI Videos/Webapp_Final.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	  </video>
+
+	  <div class="hero-video-content">
+		<h1 class="hero-video-title"><span class="gradient-text">Web & App Development</span> Services</h1>
+		<p class="hero-video-subtitle">
+		  Comprehensive web and mobile development solutions designed to accelerate your business growth and digital transformation.
+		</p>
+		<a href="#contact" class="btn-primary">Start your Project
+		<img src="assets/images/img_arrowright.svg" alt="Arrow right" class="btn-icon" />
+		</a>
+	  </div>
+	</section>  
+  
+	<br>
+
+  <!-- Core Services Section -->
+<section class="services-section">
+  <div class="services-header">
+    <h2 class="section-title">
+      Our <span class="gradient-text">Core Services</span>
+    </h2>
+    <p class="section-subtitle">
+      End-to-end development solutions tailored to your specific business requirements and goals.
+    </p>
+  </div>
+
+  <div class="services-grid">
+    <!-- Full-Stack Web Development -->
+    <article class="service-card">
+      <div class="service-header">
+		<div class="circle-icon">
+          <img src="assets/images/img_ellipse_1.png" alt="Background circle" />
+          <img src="assets/images/img_material_symbols_code_rounded.svg" alt="Code icon" />
+        </div>
+        <h3 class="service-title">Full-Stack Web Development</h3>
+      </div>
+      <p class="service-description">
+        Complete web application development using modern technologies like React, Next.js, Node.js, and TypeScript.
+      </p>
+      <div class="service-features">
+		<br>
+        Key Features:
+
+        React & Next.js Applications
+        RESTful API Development
+        Database Design & Integration
+        Real-time Features
+        Performance Optimization
+		<br><br>
+        Technologies:
+        React, Next.js, Typescript, Node.js, PostgreSQL, MongoDB
+      </div>
+    </article>
+
+    <!-- SaaS Platforms & Admin Dashboards -->
+    <article class="service-card">
+      <div class="service-header">
+        <div class="circle-icon">
+          <img src="assets/images/img_ellipse_1.png" alt="Background circle" />
+          <img src="assets/images/img_ic_outline_cloud.svg" alt="Cloud icon" />
+        </div>
+        <h3 class="service-title">SaaS Platforms & Admin Dashboards</h3>
+      </div>
+      <p class="service-description">
+        Scalable software-as-a-service platforms with comprehensive admin panels and user management systems.
+      </p>
+      <div class="service-features">
+		<br>
+        Key Features:
+
+        Multi-tenant Architecture
+        User Authentication & Authorization
+        Payment Integration
+        Analytics & Reporting
+        Role-based Access Control
+	<br><br>
+        Technologies:
+        React, Node.js, Stripe, AWS, Redis
+      </div>
+    </article>
+
+    <!-- Android/iOS Mobile Apps -->
+    <article class="service-card">
+      <div class="service-header">
+        <div class="circle-icon">
+          <img src="assets/images/img_ellipse_1.png" alt="Background circle" />
+          <img src="assets/images/img_pepicons_pencil.svg" alt="Mobile icon" />
+        </div>
+        <h3 class="service-title">Android/iOS Mobile Apps</h3>
+      </div>
+      <p class="service-description">
+        Native and cross-platform mobile applications with seamless user experiences and modern UI/UX design.
+      </p>
+      <div class="service-features">
+		<br>
+        Key Features:
+
+        Native iOS & Android Apps
+        Cross-platform Solutions
+        Offline Functionality
+        Push Notifications
+        App Store Optimization
+		<br><br>
+        Technologies:
+        React Native, Flutter, Swift, Kotlin, Firebase
+      </div>
+    </article>
+
+    <!-- Website-as-a-Service (WaaS) -->
+    <article class="service-card">
+      <div class="service-header">
+        <div class="circle-icon">
+          <img src="assets/images/img_ellipse_1.png" alt="Background circle" />
+          <img src="assets/images/img_iconoir_code_brackets.svg" alt="Code brackets icon" />
+        </div>
+        <h3 class="service-title">Website-as-a-Service (WaaS)</h3>
+      </div>
+      <p class="service-description">
+        Complete website solutions including hosting, maintenance, updates, and ongoing support services.
+      </p>
+      <div class="service-features">
+		<br>
+        Key Features:
+
+        Custom Website Design
+        Hosting & Domain Management
+        Regular Updates & Maintenance
+        SEO Optimization
+        Analytics & Monitoring
+		<br><br>
+        Technologies:
+        React, Vercel, Netlify, WordPress, Webflow
+      </div>
+    </article>
+
+    <!-- Progressive Web Apps (PWAs) -->
+    <article class="service-card" style="grid-column: 1 / -1; max-width: 610px; margin: 0 auto;">
+      <div class="service-header">
+        <div class="circle-icon">
+          <img src="assets/images/img_ellipse_1.png" alt="Background circle" />
+          <img src="assets/images/img_circum_globe.svg" alt="Globe icon" />
+        </div>
+        <h3 class="service-title">Progressive Web Apps (PWAs)</h3>
+      </div>
+      <p class="service-description">
+        Fast, reliable, and engaging web applications that provide native app-like experiences across all devices.
+      </p>
+      <div class="service-features">
+		<br>
+        Key Features:
+
+        Offline Functionality
+        Push Notifications
+        App-like Experience
+        Fast Loading Times
+        Cross-platform Compatibility
+		<br><br>
+        Technologies:
+        Service Workers, WebAssembly, IndexedDB, WebAPIs
+      </div>
+    </article>
+  </div>
+</section>
+
+<br><br>
+
+<!-- Additional Services Section -->
+<section class="additional-services">
+  <div class="additional-header">
+    <h2 class="section-title">
+      Additional <span class="gradient-text">Services</span>
+    </h2>
+    <p class="additional-subtitle">
+      Complementary services to enhance your digital presence and capabilities.
+    </p>
+  </div>
+
+  <div class="additional-grid">
+    <article class="additional-card">
+      <img src="assets/images/img_material_symbol.png" alt="Database icon" width="66" height="66" />
+      <h3 class="additional-title">Database Design</h3>
+      <p class="additional-description">
+        Efficient database architecture and performance tuning.
+      </p>
+    </article>
+
+    <article class="additional-card">
+      <img src="assets/images/img_material_symbols_lock.png" alt="Security icon" width="54" height="54" />
+      <h3 class="additional-title">Security Audits</h3>
+      <p class="additional-description">
+        Comprehensive security assessments and vulnerability testing.
+      </p>
+    </article>
+
+    <article class="additional-card">
+      <img src="assets/images/img_lets_icons_group_fill.png" alt="Team icon" width="48" height="48" />
+      <h3 class="additional-title">Team Augmentation</h3>
+      <p class="additional-description">
+        Skilled developers to extend your existing development team.
+      </p>
+    </article>
+
+    <article class="additional-card">
+      <img src="assets/images/img_ic_baseline_palette.png" alt="Design icon" width="48" height="48" />
+      <h3 class="additional-title">UI/UX Design</h3>
+      <p class="additional-description">
+        User-centered design for optimal user experience and engagement.
+      </p>
+    </article>
+
+    <article class="additional-card">
+      <img src="assets/images/img_material_symbol_44x44.png" alt="Performance icon" width="44" height="44" />
+      <h3 class="additional-title">SEO & Performance</h3>
+      <p class="additional-description">
+        Search engine optimization and website performance enhancement.
+      </p>
+    </article>
+
+    <article class="additional-card">
+      <img src="assets/images/img_ic_outline_cloud_40x40.png" alt="Cloud icon" width="40" height="40" />
+      <h3 class="additional-title">Cloud Migration</h3>
+      <p class="additional-description">
+        Seamless migration to cloud platforms with minimal downtime.
+      </p>
+    </article>
+  </div>
+</section>
+
+    <section class="process-section">
+      <h2 class="process-title">Our Development <span class="gradient-text">Process</span></h2>
+      <p class="process-subtitle">A proven methodology that ensures successful project delivery.</p>
+      <div class="process-grid">
+        <div class="process-step"><div class="step-number">01</div><h3 class="step-title">Discovery</h3><p class="step-description">Understanding your goals and requirements.</p></div>
+        <div class="process-step"><div class="step-number">02</div><h3 class="step-title">Planning</h3><p class="step-description">Crafting a detailed roadmap and milestones.</p></div>
+        <div class="process-step"><div class="step-number">03</div><h3 class="step-title">Development</h3><p class="step-description">Building, testing, and refining your solution.</p></div>
+        <div class="process-step"><div class="step-number">04</div><h3 class="step-title">Launch</h3><p class="step-description">Deployment, support, and optimization.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to <span class="gradient-text">Start Your Project?</span></h2>
+      <p class="cta-subtitle">Get a free consultation and project estimate. Let's discuss how we can bring your vision to life.</p>
+      <a href="#contact" class="btn-primary">Get Free Consultation</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col footer-info">
+          <img src="../../assets/logics.png" alt="Logic Leafs Logo" class="footer-logo">
+          <p class="footer-tagline">Built with Logic. Grown with Innovation.</p>
+          <p class="footer-description">Next-gen technology partner transforming ideas into scalable digital solutions through AI, Blockchain, SaaS, and innovative product engineering.</p>
+          <div class="footer-contact-card"><div class="contact-item"><img src="../../assets/images/img_carbon_location_filled.png" alt="Location" width="22" height="22"/><span>2nd Floor, BM Habitat Mall, Jayalakshmipuram Mysore, Karnataka, 570012</span></div></div>
+          <div class="footer-contact-card"><div class="contact-item"><img src="../../assets/images/img_ion_call.png" alt="Phone" width="22" height="22"/><span>+91 97311 95345</span></div></div>
+          <div class="footer-contact-card"><div class="contact-item"><img src="../../assets/images/img_ic_round_email.png" alt="Email" width="22" height="22"/><span>info@logicleafs.com</span></div></div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/logicleafs/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/logicleafs/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=9019225051" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-links">
+          <h4 class="footer-title">Quick Links</h4>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Careers</a>
+        </div>
+
+        <div class="footer-col footer-services">
+          <h4 class="footer-title">Our Services</h4>
+          <a href="services.html" class="footer-link">AI & Software Development</a>
+          <a href="services.html" class="footer-link">Web & App Development</a>
+          <a href="services.html" class="footer-link">Digital Marketing</a>
+          <a href="services.html" class="footer-link">Startup Consulting</a>
+          <a href="services.html" class="footer-link">R&D Projects</a>
+          <a href="services.html" class="footer-link">Training Programs</a>
+        </div>
+      </div>
+	  </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2024 Logic Leafs Private Limited. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>
