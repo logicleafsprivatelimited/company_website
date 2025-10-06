@@ -11,24 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/services.css">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
-
-    <style>
-        /* Video Wrapper */
-        .services-video-wrapper {
-            margin: 40px auto;
-            max-width: 1000px;   /* restricts video size */
-            border-radius: 12px; /* smooth edges */
-            overflow: hidden;    /* crop edges */
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-        }
-
-        .services-video {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -43,25 +25,29 @@
     </header>
 
     <main>
+        <section class="hero-video-section">
+            <video autoplay muted loop playsinline class="hero-video-bg">
+                <source src="../videos/services.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-video-content">
+                <h1 class="hero-video-title">Innovation <span class="accent">in Action</span></h1>
+                <p class="hero-video-subtitle">
+                    Future-ready tech built to innovate, scale, and move your business forward.
+                </p>
+            </div>
+        </section>
+
         <section class="section services-section">
             <div class="container">
                 <h2 class="section-title">
-                    <span style="color: #ffffff;">Innovation</span> <span class="gradient-title">in Action</span>
+                    Explore Our <span class="gradient-title">Core Services</span>
                 </h2>
                 <p class="section-subtitle">
-                    Future-ready tech built to innovate, scale, and move your business forward.
+                    A comprehensive suite of services to power your digital transformation.
                 </p>
 
-                <!-- 🎥 Services Intro Video -->
-                <div class="services-video-wrapper">
-                    <video autoplay muted loop playsinline class="services-video">
-                        <source src="../videos/services.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
                 <div class="services-grid">
-                    <!-- ✅ Service Card 1 -->
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
@@ -78,13 +64,12 @@
                             <li>Computer Vision applications</li>
                             <li>Chatbot and voicebot development</li>
                         </ul>
-                        <a href="../Services/AI professional/index.html" class="learn-more-btn">
+                        <a href="../Services/AI professional/AISoftware.html" class="learn-more-btn">
                             Learn More
                             <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
                         </a>
                     </article>
 
-                    <!-- ✅ Service Card 2 -->
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
@@ -100,13 +85,12 @@
                             <li>Website-as-a-Service (WaaS) solutions</li>
                             <li>Progressive Web Apps (PWAs)</li>
                         </ul>
-                        <a href="../Services/Webapp/index.html" class="learn-more-btn">
+                        <a href="../Services/Webapp/WebAppDevelopmentServices.html" class="learn-more-btn">
                             Learn More
                             <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
                         </a>
                     </article>
 
-                    <!-- ✅ Service Card 3 -->
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
@@ -122,13 +106,12 @@
                            <li>Content strategy & storytelling</li>
                            <li>Logo & brand identity design</li>
                         </ul>
-                        <a href="../Services/Digital Marketing/index.html" class="learn-more-btn">
+                        <a href="../Services/Digital Marketing/DigitalMarketing.html" class="learn-more-btn">
                             Learn More
                             <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
                         </a>
                     </article>
 
-                    <!-- ✅ Service Card 4 -->
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
@@ -143,13 +126,12 @@
                             <li>Product strategy & UI/UX consulting</li>
                             <li>Investor-ready pitch decks & prototypes</li>
                         </ul>
-                        <a href="../Services/Startup/index.html" class="learn-more-btn">
+                        <a href="../Services/Startup/StartupTechConsultingServices.html" class="learn-more-btn">
                             Learn More
                             <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
                         </a>
                     </article>
 
-                    <!-- ✅ Service Card 5 -->
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
@@ -164,13 +146,12 @@
                             <li>Smart automation tools for SMEs</li>
                             <li>Internal innovation labs for unique AI projects</li>
                         </ul>
-                        <a href="../Services/R&D/index.html" class="learn-more-btn">
+                        <a href="../Services/R&D/AIRDServicesLandingPage.html" class="learn-more-btn">
                            Learn More
                            <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
                         </a>
                     </article>
 
-                    <!-- ✅ Service Card 6 -->
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
@@ -194,7 +175,6 @@
             </div>
         </section>
 
-        <!-- ✅ CTA Section -->
         <section class="section cta-section">
             <div class="container">
                 <h2 class="cta-title">Ready to Start Your Project?</h2>
@@ -204,7 +184,6 @@
         </section>
     </main>
 
-    <!-- ✅ Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
