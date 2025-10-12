@@ -420,47 +420,31 @@
 	  transform: translateY(-3px);
 	}
 
-    /* ====== ANIMATIONS ====== */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ====== RESPONSIVE ====== */
-    @media (min-width: 768px) {
-      .services-grid {
+   @media (min-width: 768px) {
+    .services-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-title {
-        font-size: 52px;
-      }
-
-      .cta-title {
-        font-size: 42px;
-      }
-
-      .footer-content {
-        grid-template-columns: 2fr 1fr 1.5fr;
-        text-align: left;
-        gap: 50px;
-      }
-
-      .footer-link,
-      .footer-title {
-        text-align: left;
-      }
-
-      .social-links {
-        justify-content: flex-start;
-      }
     }
+    .section-title {
+        font-size: 45px;
+    }
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1.5fr;
+        gap: 50px;
+        text-align: left;
+    }
+    .footer-col {
+        align-items: flex-start;
+    }
+    .footer-description {
+        margin-left: 0;
+    }
+    .footer-title, .footer-link {
+        text-align: left;
+    }
+    .social-links {
+        justify-content: flex-start;
+    }
+}
   </style>
 </head>
 
@@ -736,6 +720,7 @@
         </div>
     </footer>
 </html>
+
 
 
 
