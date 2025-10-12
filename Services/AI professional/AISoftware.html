@@ -383,6 +383,32 @@
         justify-content: flex-start;
       }
     }
+
+	@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-title {
+        font-size: 45px;
+    }
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1.5fr;
+        gap: 50px;
+        text-align: left;
+    }
+    .footer-col {
+        align-items: flex-start;
+    }
+    .footer-description {
+        margin-left: 0;
+    }
+    .footer-title, .footer-link {
+        text-align: left;
+    }
+    .social-links {
+        justify-content: flex-start;
+    }
+}
 	
 	.hero-video-section {
 	  margin-top: 0 !important;
@@ -593,6 +619,7 @@
 </body>
 
 </html>
+
 
 
 
