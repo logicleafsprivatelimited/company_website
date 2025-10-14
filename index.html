@@ -15,15 +15,24 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header-container">
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="pages/about.html" class="nav-item">About</a>
-                <a href="pages/services.html" class="nav-item">Services</a>
-                <a href="pages/contact.html" class="nav-item">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">
+            <img src="assets/logics.png" alt="Logic Leafs Logo" style="height: 60px; width: auto; display: block;">
+        </a>
+
+        <nav class="nav-menu">
+            <button class="close-menu" aria-label="Close navigation menu">&times;</button>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="pages/about.html" class="nav-item">About</a>
+            <a href="pages/services.html" class="nav-item">Services</a>
+            <a href="pages/contact.html" class="nav-item">Contact</a>
+        </nav>
+
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
 
     <main>
         <section class="hero-section">
@@ -308,5 +317,21 @@
     </footer>
 
     <script src="js/form-handler.js"></script>
-</body>
+
+    <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const closeMenu = document.querySelector('.close-menu');
+
+        // Open navigation menu
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.add('active');
+        });
+
+        // Close navigation menu
+        closeMenu.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    </script>
+    </body>
 </html>
