@@ -15,12 +15,21 @@
 <body>
     <header class="header">
         <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logics.png" alt="Logic Leafs Logo" style="height: 60px; width: auto; display: block;">
+            </a>
+            
             <nav class="nav-menu">
+                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
                 <a href="../index.html" class="nav-item">Home</a>
                 <a href="about.html" class="nav-item">About</a>
                 <a href="services.html" class="nav-item">Services</a>
                 <a href="contact.html" class="nav-item active">Contact</a>
             </nav>
+
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -162,20 +171,20 @@
 
                 <div class="footer-col footer-links">
                     <h4 class="footer-title">Quick Links</h4>
-                    <a href="pages/about.html" class="footer-link">About</a>
-                    <a href="pages/services.html" class="footer-link">Services</a>
-                    <a href="pages/contact.html" class="footer-link">Contact</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
                     <a href="#" class="footer-link">Careers</a>
                 </div>
 
                 <div class="footer-col footer-services">
                     <h4 class="footer-title">Our Services</h4>
-                    <a href="pages/services.html" class="footer-link">AI & Software Development</a>
-                    <a href="pages/services.html" class="footer-link">Web & App Development</a>
-                    <a href="pages/services.html" class="footer-link">Digital Marketing</a>
-                    <a href="pages/services.html" class="footer-link">Startup Consulting</a>
-                    <a href="pages/services.html" class="footer-link">R&D Projects</a>
-                    <a href="pages/services.html" class="footer-link">Training Programs</a>
+                    <a href="services.html" class="footer-link">AI & Software Development</a>
+                    <a href="services.html" class="footer-link">Web & App Development</a>
+                    <a href="services.html" class="footer-link">Digital Marketing</a>
+                    <a href="services.html" class="footer-link">Startup Consulting</a>
+                    <a href="services.html" class="footer-link">R&D Projects</a>
+                    <a href="services.html" class="footer-link">Training Programs</a>
                 </div>
             </div>
             <div class="footer-divider"></div>
@@ -184,5 +193,21 @@
             </p>
         </div>
     </footer>
-</body>
+
+    <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const closeMenu = document.querySelector('.close-menu');
+
+        // Open navigation menu
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.add('active');
+        });
+
+        // Close navigation menu
+        closeMenu.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    </script>
+    </body>
 </html>
