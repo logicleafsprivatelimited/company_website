@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; /* MODIFIED */
     align-items: center;
 }
 
@@ -65,9 +65,19 @@ h1, h2, h3, h4, h5, h6 {
     color: #00FFFF;
 }
 
+/* ADDED: Hamburger and Close Menu buttons */
+.hamburger-menu, .close-menu {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+
 /* --- Hero Section --- */
 .hero-section {
-    /* UPDATED: Overlay transparency set to 75% opacity */
     background-image: linear-gradient(rgba(7, 37, 68, 0.75), rgba(7, 37, 68, 0.75)), url('../assets/images/img_unsplashavjegsvlfhk.png');
     background-size: cover;
     background-position: center;
@@ -89,7 +99,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.15;
     margin-bottom: 24px;
-    /* REMOVED: Text shadow is no longer needed */
 }
 
 .gradient-green { color: #39FF14; }
@@ -101,7 +110,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #E6F1FF;
     margin: 0 auto 40px auto;
     max-width: 550px;
-    /* REMOVED: Text shadow is no longer needed */
 }
 
 .cta-button {
@@ -476,7 +484,46 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Responsive Media Queries --- */
 @media (max-width: 768px) {
     .hero-title { font-size: 42px; }
-    .nav-menu { display: none; }
+
+    /* === START: MOBILE NAVIGATION STYLES === */
+    .hamburger-menu {
+        display: block; /* Show hamburger on mobile */
+        z-index: 1001; /* Ensure it's clickable */
+    }
+
+    .nav-menu {
+        display: none; /* Hide nav by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #072544;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show nav when active */
+    }
+
+    .nav-menu .nav-item {
+        font-size: 24px; /* Larger text for mobile menu */
+    }
+    
+    .nav-menu .close-menu {
+        display: block; /* Show the close button inside the mobile menu */
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        font-size: 40px;
+    }
+    /* === END: MOBILE NAVIGATION STYLES === */
+
+
     .footer-col {
         align-items: center;
     }
