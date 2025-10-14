@@ -14,13 +14,22 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logics.png" alt="Logic Leafs Logo" style="height: 60px; width: auto; display: block;">
+            </a>
+
             <nav class="nav-menu">
+                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
                 <a href="../index.html" class="nav-item">Home</a>
                 <a href="about.html" class="nav-item">About</a>
-                <a href="services.html" class="nav-item">Services</a>
+                <a href="services.html" class="nav-item active">Services</a>
                 <a href="contact.html" class="nav-item">Contact</a>
             </nav>
+
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -155,7 +164,7 @@
                     <article class="service-card">
                         <div class="service-header">
                             <div class="service-icon">
-                               <img src="../assets/images/img_fa7_solid_book_open.svg" alt="Training icon" width="38" height="38" />
+                              <img src="../assets/images/img_fa7_solid_book_open.svg" alt="Training icon" width="38" height="38" />
                             </div>
                             <h3 class="service-title">Training & Internship Programs</h3>
                         </div>
@@ -242,5 +251,21 @@
             </p>
         </div>
     </footer>
-</body>
+
+    <script>
+        const navMenu = document.querySelector('.nav-menu');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const closeMenu = document.querySelector('.close-menu');
+
+        // Open navigation menu
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.add('active');
+        });
+
+        // Close navigation menu
+        closeMenu.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    </script>
+    </body>
 </html>
