@@ -1,271 +1,483 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services | Logic Leafs</title>
-    <meta name="description" content="Explore the innovative AI, Blockchain, Web Development, and Digital Marketing services offered by Logic Leafs." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/services.css">
-    <link rel="icon" type="image/png" href="../assets/favicon.png">
-</head>
-<body>
-    <header class="header">
-        <div class="container header-container">
-            <a href="../index.html" class="logo">
-                <img src="../assets/logics.png" alt="Logic Leafs Logo" style="height: 60px; width: auto; display: block;">
-            </a>
+/* --- Reset and Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <nav class="nav-menu">
-                <button class="close-menu" aria-label="Close navigation menu">&times;</button>
-                <a href="../index.html" class="nav-item">Home</a>
-                <a href="about.html" class="nav-item">About</a>
-                <a href="services.html" class="nav-item active">Services</a>
-                <a href="contact.html" class="nav-item">Contact</a>
-            </nav>
+html {
+    scroll-behavior: smooth;
+}
 
-            <button class="hamburger-menu" aria-label="Open navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #072544;
+    color: #ffffff;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
 
-    <main>
-        <section class="hero-video-section">
-            <video autoplay muted loop playsinline class="hero-video-bg">
-                <source src="../videos/services.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-video-content">
-                <h1 class="hero-video-title">Innovation <span class="accent">in Action</span></h1>
-                <p class="hero-video-subtitle">
-                    Future-ready tech built to innovate, scale, and move your business forward.
-                </p>
-            </div>
-        </section>
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
-        <section class="section services-section">
-            <div class="container">
-                <h2 class="section-title">
-                    Explore Our <span class="gradient-title">Core Services</span>
-                </h2>
-                <p class="section-subtitle">
-                    A comprehensive suite of services to power your digital transformation.
-                </p>
+/* --- Header & Navigation --- */
+.header {
+    background: transparent;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-                <div class="services-grid">
-                    <article class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <img src="../assets/images/img_hugeicons_neural_network.svg" alt="AI Development icon" width="38" height="38" />
-                            </div>
-                            <h3 class="service-title">AI & Software Development</h3>
-                        </div>
-                        <p class="service-description">Transform your business with intelligent solutions</p>
-                        <ul class="service-features">
-                            <li>Custom AI model development</li>
-                            <li>Machine Learning solutions</li>
-                            <li>Predictive analytics systems</li>
-                            <li>Natural Language Processing (NLP)</li>
-                            <li>Computer Vision applications</li>
-                            <li>Chatbot and voicebot development</li>
-                        </ul>
-                        <a href="../Services/AI professional/AISoftware.html" class="learn-more-btn">
-                            Learn More
-                            <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
-                        </a>
-                    </article>
+.header-container {
+    display: flex;
+    justify-content: space-between; /* MODIFIED */
+    align-items: center;
+}
 
-                    <article class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <img src="../assets/images/img_material_symbol.svg" alt="Web Development icon" width="38" height="38" />
-                            </div>
-                            <h3 class="service-title">Web & Mobile App Developments</h3>
-                        </div>
-                        <p class="service-description">Modern, scalable digital experiences</p>
-                        <ul class="service-features">
-                            <li>Full-stack web development (React, Next.js, etc.)</li>
-                            <li>SaaS platforms & admin dashboards</li>
-                            <li>Android/iOS mobile apps</li>
-                            <li>Website-as-a-Service (WaaS) solutions</li>
-                            <li>Progressive Web Apps (PWAs)</li>
-                        </ul>
-                        <a href="../Services/Webapp/WebAppDevelopmentServices.html" class="learn-more-btn">
-                            Learn More
-                            <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
-                        </a>
-                    </article>
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-                    <article class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <img src="../assets/images/img_streamline_ulti.svg" alt="Marketing icon" width="38" height="38" />
-                            </div>
-                            <h3 class="service-title">Digital Marketing & Branding</h3>
-                        </div>
-                        <p class="service-description">Amplify your reach and impact</p>
-                        <ul class="service-features">
-                           <li>Social media marketing (Instagram, LinkedIn, etc.)</li>
-                           <li>SEO (Search Engine Optimization)</li>
-                           <li>Google Ads & paid campaigns</li>
-                           <li>Content strategy & storytelling</li>
-                           <li>Logo & brand identity design</li>
-                        </ul>
-                        <a href="../Services/Digital Marketing/DigitalMarketing.html" class="learn-more-btn">
-                            Learn More
-                            <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
-                        </a>
-                    </article>
+.nav-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-                    <article class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <img src="../assets/images/img_fluent_people_team_16_filled.svg" alt="Consulting icon" width="38" height="38" />
-                            </div>
-                            <h3 class="service-title">Startup Tech Consulting</h3>
-                        </div>
-                        <p class="service-description">From idea to market-ready product</p>
-                        <ul class="service-features">
-                            <li>MVP development</li>
-                            <li>Tech co-founder services</li>
-                            <li>Product strategy & UI/UX consulting</li>
-                            <li>Investor-ready pitch decks & prototypes</li>
-                        </ul>
-                        <a href="../Services/Startup/StartupTechConsultingServices.html" class="learn-more-btn">
-                            Learn More
-                            <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
-                        </a>
-                    </article>
+.nav-item:hover {
+    color: #00FFFF;
+}
 
-                    <article class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <img src="../assets/images/img_hugeicons_blockchain_01.svg" alt="Blockchain icon" width="38" height="38" />
-                            </div>
-                            <h3 class="service-title">Blockchain Development & R&D</h3>
-                        </div>
-                        <p class="service-description">Pushing the boundaries of innovation</p>
-                        <ul class="service-features">
-                            <li>Voice-based multilingual assistants</li>
-                            <li>Retrieval-Augmented Generation (RAG) systems</li>
-                            <li>Smart automation tools for SMEs</li>
-                            <li>Internal innovation labs for unique AI projects</li>
-                        </ul>
-                        <a href="../Services/R&D/AIRDServicesLandingPage.html" class="learn-more-btn">
-                           Learn More
-                           <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
-                        </a>
-                    </article>
+.nav-item.active {
+    color: #00FFFF;
+    font-weight: 700;
+}
 
-                    <article class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                              <img src="../assets/images/img_fa7_solid_book_open.svg" alt="Training icon" width="38" height="38" />
-                            </div>
-                            <h3 class="service-title">Training & Internship Programs</h3>
-                        </div>
-                        <p class="service-description">Building tomorrow's tech talent</p>
-                        <ul class="service-features">
-                            <li>Real-time full stack development internships</li>
-                            <li>AI/ML live projects for students</li>
-                            <li>Placement-linked learning programs</li>
-                            <li>Founder-led mentorship for tech talent</li>
-                        </ul>
-                        <a href="contact.html" class="learn-more-btn">
-                            Learn More
-                            <img src="../assets/images/img_bxs_right_arrow.svg" alt="Arrow" width="22" height="22" />
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
+/* ADDED: Hamburger and Close Menu buttons */
+.hamburger-menu, .close-menu {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+}
 
-        <section class="section cta-section">
-            <div class="container">
-                <h2 class="cta-title">Ready to Start Your Project?</h2>
-                <p class="cta-subtitle">Get a free consultation and project estimate. Let's discuss how we can bring your vision to life.</p>
-                <a href="contact.html" class="cta-button">Get Free Consultation</a>
-            </div>
-        </section>
-    </main>
+/* --- General Section Styles --- */
+.section {
+    padding: 60px 0;
+}
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col footer-info">
-                    <img src="../assets/logics.png" alt="Logic Leafs Logo" class="footer-logo"> 
-                    <p class="footer-tagline">Built with Logic. Grown with Innovation.</p>
-                    <p class="footer-description">
-                        Next-gen technology partner transforming ideas into scalable digital solutions through AI, Blockchain, SaaS, and innovative product engineering.
-                    </p>
-                    <div class="footer-contact-card">
-                        <div class="contact-item">
-                            <img src="../assets/images/img_carbon_location_filled.png" alt="Location" width="22" height="22" />
-                            <span>2nd Floor, BM Habitat Mall, Jayalakshmipuram Mysore, Karnataka, 570012</span>
-                        </div>
-                    </div>
-                   <div class="footer-contact-card">
-                        <div class="contact-item">
-                            <img src="../assets/images/img_ion_call.png" alt="Phone" width="22" height="22" />
-                            <span>+91 97311 95345</span>
-                        </div>
-                    </div>
-                    <div class="footer-contact-card">
-                        <div class="contact-item">
-                            <img src="../assets/images/img_ic_round_email.png" alt="Email" width="22" height="22" />
-                            <span>info@logicleafs.com</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/logicleafs/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/logicleafs/posts/?feedView=all" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://api.whatsapp.com/send/?phone=9019225051&text&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #E6F1FF;
+}
 
-                <div class="footer-col footer-links">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <a href="about.html" class="footer-link">About</a>
-                    <a href="services.html" class="footer-link">Services</a>
-                    <a href="contact.html" class="footer-link">Contact</a>
-                    <a href="#" class="footer-link">Careers</a>
-                </div>
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #adadad;
+    margin-bottom: 50px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-                <div class="footer-col footer-services">
-                    <h4 class="footer-title">Our Services</h4>
-                    <a href="../Services/AI professional/index.html" class="footer-link">AI & Software Development</a>
-                    <a href="../Services/Webapp/index.html" class="footer-link">Web & App Development</a>
-                    <a href="../Services/Digital Marketing/index.html" class="footer-link">Digital Marketing</a>
-                    <a href="../Services/Startup/index.html" class="footer-link">Startup Consulting</a>
-                    <a href="../Services/R&D/index.html" class="footer-link">R&D Projects</a>
-                    <a href="contact.html" class="footer-link">Training Programs</a>
-                </div>
-            </div>
-            <div class="footer-divider"></div>
-            <p class="footer-copyright">
-                © 2024 Logic Leafs Private Limited. All rights reserved.
-            </p>
-        </div>
-    </footer>
+.highlight-text {
+    color: #00FFFF;
+}
 
-    <script>
-        const navMenu = document.querySelector('.nav-menu');
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const closeMenu = document.querySelector('.close-menu');
+/* --- Hero Section --- */
+.hero-section {
+    background-color: #0A2E57;
+    text-align: center;
+    padding: 160px 24px 100px 24px;
+}
 
-        // Open navigation menu
-        hamburgerMenu.addEventListener('click', () => {
-            navMenu.classList.add('active');
-        });
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
 
-        // Close navigation menu
-        closeMenu.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    </script>
-    </body>
-</html>
+.hero-subtitle {
+    font-size: 18px;
+    color: #E0E0E0;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #00FFFF;
+    border-radius: 8px;
+    color: #00FFFF;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #00FFFF;
+    color: #072544;
+}
+
+/* --- Text Sections (Story, Evolution) --- */
+.text-section .section-text {
+    font-size: 16px;
+    color: #adadad;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- Core Values Section --- */
+.values-section {
+    background-color: #0A2E57;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to 1 column for mobile */
+    gap: 28px;
+}
+
+.value-card {
+    background-color: #072544;
+    padding: 32px;
+    border: 1px solid #5800FF;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(88, 0, 255, 0.2);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 24px auto;
+    background: rgba(88, 0, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+.value-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #E6F1FF;
+    margin-bottom: 12px;
+}
+
+.value-description {
+    font-size: 15px;
+    color: #adadad;
+}
+
+/* --- Mid CTA Section --- */
+.mid-cta {
+    background-color: #143a65;
+    border-radius: 12px;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.mid-cta-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.mid-cta-text {
+    font-size: 16px;
+    color: #adadad;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Bottom CTA Section --- */
+.bottom-cta-section {
+    background: linear-gradient(90deg, #1E5798 0%, #2874CB 100%);
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.bottom-cta-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.bottom-cta-subtitle {
+    font-size: 18px;
+    color: #E0E0E0;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(90deg, #9D00FF 0%, #00FFFF 100%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(157, 0, 255, 0.3);
+}
+
+
+/* =================================== */
+/* ===         FOOTER STYLES         === */
+/* =================================== */
+
+.footer {
+    padding: 60px 0 30px;
+    background-color: #0b2f57;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Default for mobile */
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #E6F1FF;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #adadad;
+    max-width: 350px;
+    margin: 0 auto 30px auto;
+}
+
+.footer-contact-card {
+    background-color: #1B4571;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+}
+
+.footer-contact-card .contact-item {
+    font-size: 15px;
+    color: #E6F1FF;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-contact-card .contact-item img {
+    filter: brightness(0) invert(1);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #E6F1FF;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center; /* Default for mobile */
+}
+
+.footer-link {
+    font-size: 15px;
+    color: #adadad;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    text-align: center; /* Default for mobile */
+    width: 100%;
+}
+
+.footer-link:hover {
+    color: #00FFFF;
+}
+
+.footer-divider {
+    height: 1px;
+    background-color: #2e5a8a;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #adadad;
+}
+
+/* === UPDATED: Social Media Links Styles === */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00FFFF;
+  transform: translateY(-3px);
+}
+
+
+/* =================================== */
+/* ===     RESPONSIVE QUERIES      === */
+/* =================================== */
+
+/* --- Tablet & Smaller Screens --- */
+@media (max-width: 768px) {
+    /* === START: MOBILE NAVIGATION STYLES === */
+    .hamburger-menu {
+        display: block; /* Show hamburger on mobile */
+        z-index: 1001; /* Ensure it's clickable */
+    }
+
+    .nav-menu {
+        display: none; /* Hide nav by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #072544;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show nav when active */
+    }
+
+    .nav-menu .nav-item {
+        font-size: 24px; /* Larger text for mobile menu */
+    }
+    
+    .nav-menu .close-menu {
+        display: block; /* Show the close button inside the mobile menu */
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        font-size: 40px;
+    }
+    /* === END: MOBILE NAVIGATION STYLES === */
+
+    .hero-title {
+        font-size: 40px;
+    }
+    .section-title, .bottom-cta-title {
+        font-size: 32px;
+    }
+}
+
+/* --- Tablet (Landscape) --- */
+@media (min-width: 640px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- Desktop & Larger Screens --- */
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 42px;
+    }
+
+    /* Footer Desktop Layout */
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1.5fr;
+        gap: 50px;
+        text-align: left;
+    }
+    .footer-col {
+        align-items: flex-start;
+    }
+    .footer-description {
+        margin-left: 0;
+    }
+    .footer-title {
+        text-align: left;
+    }
+    .footer-link {
+        text-align: left;
+    }
+    .social-links {
+        justify-content: flex-start;
+    }
+}
