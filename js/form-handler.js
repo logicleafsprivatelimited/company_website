@@ -1,56 +1,53 @@
-// This single script will handle both the index.html and contact.html forms.
-
-// We wrap our code in a DOMContentLoaded event listener.
-// This ensures the script only runs after the entire HTML page has been loaded.
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // Find any form on the page with the id "contact-form".
+    // This script now handles ANY form with the id "contact-form"
     const contactForm = document.getElementById("contact-form");
 
-    // If a form with that ID exists on the current page, attach our submission logic to it.
     if (contactForm) {
         contactForm.addEventListener("submit", async (e) => {
-            // 1. Prevent the default browser action of reloading the page on submit.
-            e.preventDefault();
+            e.preventDefault(); // Stop the default form submission
 
             const form = e.target;
             const formData = new FormData(form);
             const submitButton = form.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.textContent;
 
-            // 2. Give the user visual feedback that something is happening.
+            // Disable button and show "Sending..."
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
             try {
-                // 3. Send the form data to our FastAPI backend using the fetch API.
-                // ✅ FIXED: The URL is now corrected to 127.0.0.1
-                const response = await fetch("http://127.0.0.1:8000/submit-form", {
-                    method: "POST",
-                    body: formData, // FormData automatically sets the correct headers.
+                // Submit the form data to Formspree
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json' // Required for Formspree AJAX
+                    }
                 });
 
-                // 4. Handle the response from the server.
+                // Check if Formspree accepted the submission
                 if (response.ok) {
-                    // If the server responds with a success status (like 200 OK)...
-                    alert("Thank you! Your message has been sent successfully.");
-                    form.reset(); // Clear the form fields.
+                    alert("Thank you! Your message has been sent.");
+                    form.reset(); // Clear the form fields
                 } else {
-                    // If the server responds with an error status (like 500)...
-                    const errorResult = await response.json();
-                    console.error("Server Error:", errorResult.detail);
-                    alert(`Submission failed: ${errorResult.detail}`);
+                    // Handle errors from Formspree
+                    const result = await response.json();
+                    if (result.errors) {
+                        const message = result.errors.map(err => err.message).join(', ');
+                        alert("Submission failed: " + message);
+                    } else {
+                         alert("Submission failed. Please try again.");
+                    }
                 }
             } catch (error) {
-                // 5. Handle network errors (e.g., if the server is not running).
+                // Handle network errors
                 console.error("Network or Fetch Error:", error);
-                alert("Sorry, we couldn't connect to the server. Please make sure it's running and try again.");
+                alert("Sorry, we couldn't connect to the server. Please try again later.");
             } finally {
-                // 6. Always re-enable the button, whether the submission succeeded or failed.
+                // Re-enable the button and restore original text
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
             }
         });
     }
 });
-
