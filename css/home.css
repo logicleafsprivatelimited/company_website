@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* MODIFIED */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #00FFFF;
 }
 
-/* ADDED: Hamburger and Close Menu buttons */
+/* Hamburger and Close Menu buttons */
 .hamburger-menu, .close-menu {
     display: none; /* Hidden by default */
     cursor: pointer;
@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 .value-title { font-size: 20px; font-weight: 600; color: #E6F1FF; margin-bottom: 12px; }
 .value-description { font-size: 15px; color: #adadad; line-height: 1.6; }
 
-/* === UPDATED ABOUT US SECTION STYLES === */
+/* === ABOUT US SECTION STYLES === */
 .about-us-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -308,6 +308,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 66px; /* Align description with title */
 }
 
+/* Retaining these styles in case other pages use them, even though image is removed from home */
 .about-us-image {
     min-height: 400px;
     border-radius: 8px;
@@ -318,8 +319,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     object-fit: cover;
 }
-/* === END OF UPDATED ABOUT US STYLES === */
-
 
 /* --- Other Sections --- */
 .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
@@ -454,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #adadad;
 }
 
-/* === ADDED: Social Media Links Styles === */
+/* Social Media Links Styles */
 .social-links {
   display: flex;
   justify-content: center;
@@ -485,14 +484,14 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .hero-title { font-size: 42px; }
 
-    /* === START: MOBILE NAVIGATION STYLES === */
+    /* Mobile Navigation Styles */
     .hamburger-menu {
-        display: block; /* Show hamburger on mobile */
-        z-index: 1001; /* Ensure it's clickable */
+        display: block; 
+        z-index: 1001; 
     }
 
     .nav-menu {
-        display: none; /* Hide nav by default */
+        display: none; 
         position: fixed;
         top: 0;
         left: 0;
@@ -507,22 +506,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .nav-menu.active {
-        display: flex; /* Show nav when active */
+        display: flex;
     }
 
     .nav-menu .nav-item {
-        font-size: 24px; /* Larger text for mobile menu */
+        font-size: 24px; 
     }
     
     .nav-menu .close-menu {
-        display: block; /* Show the close button inside the mobile menu */
+        display: block; 
         position: absolute;
         top: 20px;
         right: 24px;
         font-size: 40px;
     }
-    /* === END: MOBILE NAVIGATION STYLES === */
-
 
     .footer-col {
         align-items: center;
@@ -569,6 +566,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
     .about-us-container {
-        grid-template-columns: 1.1fr 1fr;
+        /* UPDATED: Changed from '1.1fr 1fr' to '1fr' to fill the space left by the removed image */
+        grid-template-columns: 1fr; 
     }
 }
